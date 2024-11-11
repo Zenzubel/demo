@@ -1,0 +1,56 @@
+{{#if type1 }}
+<div class="range">
+	<div class="range__wrapper">
+		<div class="range__pipses range__pipses--child">
+			<span class="range__scale">10 000, ₽</span>
+			<span class="range__scale">150 000, ₽</span>
+			<span class="range__scale">300 000, ₽</span>
+			<span class="range__scale">450 000, ₽</span>
+			<span class="range__scale">600 000, ₽</span>
+		</div>
+
+		<div id="slider-handles-price" class=""></div>
+		<div class="range__inputs">
+			<div class="range__input-box">
+				<label class="range__label" for="input-price-min" data-text="от">
+					<input type="text" class="input range__input range__input--mod" id="input-price-min">
+				</label>
+			</div>
+			<span class="range__tire">—</span>
+			<div class="range__input-box">
+				<label class="range__label" for="input-price-max" data-text="до">
+					<input type="text" class="input range__input range__input--mod" id="input-price-max">
+				</label>
+			</div>
+		</div>
+	</div>
+</div>
+{{else if type2}}
+<div class="range">
+	<div class="range__wrapper">
+		<div class="range__pipses">
+			<span class="range__scale">0</span>
+			<span class="range__scale">60</span>
+			<span class="range__scale">100</span>
+			<span class="range__scale">150</span>
+			<span class="range__scale">200</span>
+		</div>
+
+		<div id="slider-handles-size" class=""></div>
+		<div class="range__inputs">
+			<div class="range__input-box">
+				<label class="range__label" for="input-number-min">
+					<input type="text" class="input range__input" id="input-size-min">
+				</label>
+			</div>
+			<span class="range__tire">—</span>
+			<div class="range__input-box">
+				<label class="range__label" for="input-number-max">
+					<input type="text" class="input range__input" id="input-size-max">
+				</label>
+			</div>
+		</div>
+	</div>
+</div>
+{{else}}
+{{/if}}

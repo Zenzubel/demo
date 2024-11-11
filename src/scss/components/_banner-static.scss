@@ -1,0 +1,5 @@
+.banner-static {
+  @include max-width($breakpoint-xs) {
+    margin: 0 -1.2rem;
+  }
+}

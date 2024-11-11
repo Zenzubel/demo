@@ -1,0 +1,13 @@
+{{#if inStock}}
+<span class="have">В наличии</span>
+{{else if haveType}}
+<span class="have have--type">В наличии</span>
+{{else if haveTypeCart}}
+<span class="have have--type have--type-cart">В наличии</span>
+{{else if insSockDark}}
+<span class="have have--dark">В наличии</span>
+{{else if underOrder}}
+<span class="have have--order">Под заказ</span>
+{{else if underOrderCart}}
+<span class="have have--order have--order-cart">Под заказ</span>
+{{/if}}

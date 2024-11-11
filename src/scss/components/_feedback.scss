@@ -1,0 +1,113 @@
+.feedback {
+  &__wrapper {
+    gap: 3.2rem;
+
+    &--padding {
+      padding: 1.6rem 0 6rem 0;
+    }
+  }
+
+  &__wrapper,
+  &__person,
+  &__plusminus,
+  &__first,
+  &__list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__person {
+    flex-direction: row;
+    gap: 1.2rem;
+    align-items: center;
+
+    @include max-width($breakpoint-xxs-3) {
+      flex-direction: row;
+      justify-content: space-between;
+      width: 100%;
+    }
+  }
+
+  &__nikname {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--gray-2300);
+  }
+
+  &__date {
+    color: var(--gray-2400);
+  }
+
+  &__expereance,
+  &__text,
+  &__date,
+  &__after {
+    font-size: 1.3rem;
+    font-weight: 400;
+  }
+
+  &__expereance {
+    color: var(--gray-2500);
+  }
+
+  &__expereance-time,
+  &__text,
+  &__after {
+    color: black;
+  }
+
+  &__plusminus,
+  &__first {
+    gap: 1.3rem;
+    align-items: flex-start;
+  }
+
+  &__text,
+  &__after {
+    text-align: left;
+    white-space: normal;
+  }
+
+  &__plusminus {
+    margin: 2.2rem 0 2.9rem;
+  }
+
+  &__plus,
+  &__minus {
+    display: flex;
+    gap: 1.6rem;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    svg {
+      width: 2.4rem;
+      min-width: 2.4rem;
+      height: 2.4rem;
+      min-height: 2.4rem;
+    }
+  }
+
+  &__stars {
+    svg {
+      width: 1.7rem;
+      min-width: 1.7rem;
+      height: 1.7rem;
+      min-height: 1.7rem;
+    }
+  }
+
+  &__list {
+    gap: 2rem;
+  }
+
+  &__item {
+    padding: 0 0 2rem 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  }
+
+  &__write-btn {
+    &.active {
+      display: none;
+    }
+  }
+}

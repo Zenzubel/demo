@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html data-theme="light" class="page page--{{ title }}" {{#if isDev }} data-dev {{/if}}>
+
+<head>
+	{{> layouts/head }}
+
+	<title>{{ title }}</title>
+</head>
+
+<body>
+	<div class="content">
+		{{> layouts/header }}
+
+		<main>
+			{{> sections/catalog-page }}
+		</main>
+
+		{{> layouts/footer }}
+	</div>
+
+	{{> layouts/modals }}
+	{{> layouts/tooltips }}
+</body>
+
+</html>

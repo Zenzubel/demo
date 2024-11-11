@@ -1,0 +1,27 @@
+.user-actions {
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  &__total {
+    font-size: 2rem;
+    font-weight: 500;
+    color: var(--gray-100);
+  }
+
+  &__total-currency {
+    margin: 0 0 0 0.3rem;
+  }
+
+  &__to-cart {
+    text-transform: uppercase;
+  }
+
+  &__buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+}

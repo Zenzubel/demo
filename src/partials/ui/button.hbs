@@ -1,0 +1,5 @@
+<button class="button {{#if size}}button--{{ size }}{{/if}} {{#if mode}}button--{{ mode }}{{/if}} {{ className }}"
+	type="{{#if type}}{{ type }}{{else}}button{{/if}}">
+	{{#if icon}} {{> ui/svg id=icon }} {{/if}}
+	<span class="{{ textClass }}"> {{ text }} </span>
+</button>

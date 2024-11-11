@@ -1,0 +1,90 @@
+.cart-inn {
+  &__wrapper {
+    max-width: 48rem;
+    margin: 0 auto;
+
+    &--pt {
+      padding-top: 1.2rem;
+    }
+  }
+
+  &__cards {
+    display: flex;
+
+    &--column {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &--gap {
+      gap: 1rem;
+    }
+  }
+
+  &__total-block {
+    display: flex;
+    flex-direction: column;
+    gap: 2.7rem;
+    padding: 0.8rem 0 0 0;
+  }
+
+  &__clear {
+    .button {
+      font-size: 1.1rem;
+      font-weight: 500;
+      color: var(--gray-500);
+    }
+  }
+
+  &__good {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__total-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  &__goods-count {
+    color: var(--gray-500);
+  }
+
+  &__goods-count,
+  &__purchases {
+    font-size: 1.4rem;
+    font-weight: 500;
+  }
+
+  &__sum {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--gray-500);
+    text-align: right;
+  }
+
+  &__goods-count-num,
+  &__sum-count,
+  &__sum-curency,
+  &__goods-count {
+    color: black;
+  }
+
+  &__purchases {
+    color: var(--violet-300);
+  }
+
+  &__actions {
+    display: flex;
+    flex-direction: column;
+    gap: 2.9rem;
+    align-items: center;
+
+    .button--type2 {
+      max-width: 48rem;
+      height: 4.8rem;
+    }
+  }
+}

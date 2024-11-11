@@ -1,0 +1,45 @@
+.slider-paginate {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+
+  &--absolute {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+
+    @include max-width($breakpoint-xs) {
+      bottom: 1rem;
+    }
+  }
+
+  &--mobile {
+    bottom: 1.7rem;
+    z-index: -5;
+
+    @media (max-width: $breakpoint-xxs-3) {
+      z-index: 2;
+    }
+  }
+
+  .swiper-pagination-bullet {
+    // cursor: pointer;
+    display: inline-block;
+    width: 0.6rem;
+    height: 0.6rem;
+    background: rgba(255, 255, 255, 0.7);
+    border: 1px solid black;
+    border-radius: 50%;
+    transition-duration: 0.6s;
+  }
+
+  .swiper-pagination-bullet-active {
+    width: 1rem;
+    height: 1rem;
+    background: black;
+    border: 1px solid rgba(208, 208, 208, 0.7);
+    transition-duration: 0.6s;
+  }
+}

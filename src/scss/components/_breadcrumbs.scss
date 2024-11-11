@@ -1,0 +1,49 @@
+.breadcrumbs {
+  padding: 1.5rem 0;
+
+  &__list {
+    display: flex;
+    gap: 2rem;
+  }
+
+  &__now,
+  &__link {
+    font-size: 1.1rem;
+    font-weight: 500;
+    line-height: 1;
+  }
+
+  &__link {
+    color: var(--gray-500);
+    transition-duration: 0.3s;
+
+    @media (any-hover: hover) {
+      &:hover {
+        color: var(--primary-2-hover);
+      }
+    }
+  }
+
+  &__now {
+    color: var(--gray-800);
+  }
+
+  &__item + &__item {
+    position: relative;
+
+    &::before {
+      position: absolute;
+      top: 50%;
+      left: -1.3rem;
+      z-index: 0;
+      width: 0.8rem;
+      height: 0.6rem;
+      content: '';
+      background-image: url('../img/svg/bread-arrow.svg');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      transform: translateY(-50%);
+    }
+  }
+}

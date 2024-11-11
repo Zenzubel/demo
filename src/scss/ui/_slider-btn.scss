@@ -1,0 +1,63 @@
+.slider-btn {
+  &--top {
+    @media (max-width: $breakpoint-sm) {
+      display: none;
+    }
+  }
+
+  &__button {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 4.4rem;
+    height: 4.4rem;
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid var(--accent-gray);
+    border-radius: 1.6rem;
+    outline: none;
+    transition-duration: 0.3s;
+
+    &:disabled,
+    &[disabled],
+    &.disabled {
+      border: 0;
+      opacity: 0;
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        background: rgba(0, 0, 0, 0.8);
+      }
+    }
+
+    &--absolute {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    &--page-card {
+      background: rgba(0, 0, 0, 0.8);
+      border: 0;
+
+      @media (any-hover: hover) {
+        &:hover {
+          background: rgba(0, 0, 0, 0.5);
+        }
+      }
+    }
+
+    &--next {
+      right: 1.6rem;
+
+      svg {
+        transform: translate(0.1rem);
+      }
+    }
+
+    &--prev {
+      left: 1.6rem;
+    }
+  }
+}

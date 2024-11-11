@@ -1,0 +1,96 @@
+.confirm {
+  &__wrapper {
+    &--column {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &--gap {
+      gap: 2.8rem;
+    }
+
+    &--width {
+      max-width: 48rem;
+      margin: 0 auto;
+    }
+  }
+
+  &__placed {
+    display: flex;
+    flex-direction: column;
+    gap: 2.7rem;
+    align-items: center;
+    padding: 2rem 0 0.6rem;
+
+    svg {
+      width: 3.6rem;
+      min-width: 3.6rem;
+      height: 3.6rem;
+      min-height: 3.6rem;
+    }
+  }
+
+  &__placed-text {
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-align: center;
+  }
+
+  &__verify {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1.6rem;
+    background: linear-gradient(153deg, rgba(241, 66, 103, 0.07), rgba(236, 45, 45, 0)),
+      linear-gradient(to top, rgba(65, 30, 65, 0.07), rgba(167, 77, 165, 0.07)),
+      rgba(199, 93, 186, 0.07);
+    border-radius: 1.2rem;
+
+    .button--type2 {
+      max-width: 76.8rem;
+    }
+  }
+
+  &__verify-text {
+    font-size: 1.6rem;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  &__verify-text-color {
+    color: var(--violet-200);
+  }
+
+  &__subscribe {
+    padding: 1.6rem;
+    font-size: 1.4rem;
+    color: black;
+    background-color: rgba(0, 0, 0, 0.06);
+    border-radius: 1.2rem;
+
+    .button--white {
+      max-width: 76.8rem;
+    }
+
+    &--column {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &--gap {
+      gap: 3.6rem;
+    }
+  }
+
+  &__about {
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.4;
+  }
+
+  &__chanel {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+  }
+}

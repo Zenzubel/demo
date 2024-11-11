@@ -1,0 +1,93 @@
+.card-tabs {
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 3.8rem;
+
+    @include max-width($breakpoint-xxs-3) {
+      gap: 2.4rem;
+    }
+  }
+
+  &__controllers-block {
+    display: flex;
+
+    @include max-width($breakpoint-md) {
+      display: block;
+    }
+  }
+
+  &__controllers {
+    display: flex;
+    width: 100%;
+
+    @include max-width($breakpoint-md) {
+      + .card-tabs__controllers {
+        margin: 1rem 0 0 0;
+      }
+    }
+
+    &--down {
+      flex: 1 0 60%;
+      border-left: 1px solid rgba(0, 0, 0, 0.1);
+
+      @include max-width($breakpoint-xs) {
+        display: none;
+      }
+    }
+  }
+
+  &__control + &__control {
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  &__control {
+    &--left {
+      border-top-left-radius: 1.2rem;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+      border-bottom-left-radius: 1.2rem;
+    }
+
+    &--right {
+      border-top-left-radius: 0;
+      border-top-right-radius: 1.2rem;
+      border-bottom-right-radius: 1.2rem;
+      border-bottom-left-radius: 0;
+    }
+
+    @include max-width($breakpoint-md) {
+      &--left-md {
+        border-top-left-radius: 1.2rem;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 1.2rem;
+      }
+
+      &--right-md {
+        border-top-left-radius: 0;
+        border-top-right-radius: 1.2rem;
+        border-bottom-right-radius: 1.2rem;
+        border-bottom-left-radius: 0;
+      }
+    }
+  }
+
+  &__control-stars {
+    display: flex;
+    align-items: center;
+
+    @media (max-width: $breakpoint-sm) {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+
+  &__text-variable {
+    margin: 0 1rem 0 0.3rem;
+
+    @media (max-width: $breakpoint-sm) {
+      // margin: 0;
+    }
+  }
+}

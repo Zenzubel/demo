@@ -1,0 +1,72 @@
+<div class="options">
+	<div class="options__wrapper">
+		<div class="options__parent">
+			<div class="options__control" data-tabs="options-tabs">
+				<button class="button button--null button--tab button--br-l" data-tab="options-tab-1">
+					<span class="button__text button__text--tab">Опции в наличии</span>
+				</button>
+				<button class="button button--null button--tab button--br-r" data-tab="options-tab-2">
+					<span class="button__text button__text--tab">Опции под заказ</span>
+				</button>
+			</div>
+			<div class="options__tabs-content" data-tabs-contents="options-tabs">
+				<div class="options__tab-page" data-tab-content="options-tab-1">
+					<table class="table table--width">
+						<tbody class="table__body">
+							<tr class="table__tr table__tr--border">
+								<td class="table__td">Силикон</td>
+								<td class="table__td">Улучшенный SLE <span class="table__td-tippy" data-tippy="Сообщение">{{> ui/svg
+										id="notice"}}</span>
+								</td>
+							</tr>
+							<tr class="table__tr table__tr--border">
+								<td class="table__td">Челюсть</td>
+								<td class="table__td">Подвижная</td>
+							</tr>
+							<tr class="table__tr table__tr--border">
+								<td class="table__td">Скелет</td>
+								<td class="table__td">EXP <span class="table__td-tippy" data-tippy="Сообщение">{{> ui/svg
+										id="notice"}}</span></td>
+							</tr>
+							<tr class="table__tr table__tr--border">
+								<td class="table__td">Плечи</td>
+								<td class="table__td">Подвижные</td>
+							</tr>
+							<tr class="table__tr table__tr--border">
+								<td class="table__td">Ноги</td>
+								<td class="table__td">Устойчивые <span class="table__td-tippy" data-tippy="Сообщение">{{> ui/svg
+										id="notice"}}</span></td>
+							</tr>
+							<tr class="table__tr table__tr--border">
+								<td class="table__td">Пальцы на руках</td>
+								<td class="table__td">Шарнирные</td>
+							</tr>
+							<tr class="table__tr table__tr--border">
+								<td class="table__td">Грудь</td>
+								<td class="table__td">Гелевые вставки</td>
+							</tr>
+							<tr class="table__tr table__tr--border">
+								<td class="table__td">Ягодицы</td>
+								<td class="table__td">Гелевые вставки</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+
+				<div class="options__tab-page" data-tab-content="options-tab-2">
+					{{> components/order-options heading="Тип скелета" four="true" video="true"}}
+					{{> components/order-options heading="Подвижность суставов" one="true"}}
+					{{> components/order-options heading="Тип скелета" four="true" video="true"}}
+					{{> components/order-options heading="Цвет кожи" tree="true"}}
+					{{> components/order-options heading="Тип скелета" four="true" video="true"}}
+					{{> components/order-options heading="Цвет кожи" tree="true"}}
+					{{> components/order-options heading="Цвет кожи" tree="true"}}
+					{{> components/order-options heading="Цвет кожи" tree="true"}}
+					{{> components/order-options heading="Цвет кожи" tree="true"}}
+					{{> components/order-options heading="Цвет кожи" tree="true"}}
+					{{> components/order-options heading="Цвет кожи" tree="true"}}
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

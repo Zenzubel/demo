@@ -1,0 +1,15 @@
+.cards {
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+
+    @include max-width($breakpoint-md) {
+      gap: 3.8rem;
+    }
+
+    @include max-width($breakpoint-xxs-3) {
+      gap: 3.2rem;
+    }
+  }
+}

@@ -1,0 +1,8 @@
+<div class="slider-btn {{#if mod}} slider-btn--{{mod}}{{/if}} {{ classParent }}">
+	<button
+		class="slider-btn__button slider-btn__button--prev {{#if absolute}} slider-btn__button--{{absolute}}{{/if}} {{#if common}}slider-btn__button--{{common}}{{/if}} {{ classPrev }}">
+		{{> ui/svg id="prev"}}</button>
+	<button
+		class="slider-btn__button slider-btn__button--next {{#if absolute}} slider-btn__button--{{absolute}}{{/if}} {{#if common}}slider-btn__button--{{common}}{{/if}} {{ classNext }}">
+		{{> ui/svg id="next"}}</button>
+</div>

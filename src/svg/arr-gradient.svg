@@ -1,0 +1,15 @@
+<svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M2.04831 0.900912L9.14997 0.900811M9.14997 0.900811L9.14997 7.90147M9.14997 0.900811L0.900389 9.15039" stroke="#8D418F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2.04831 0.900912L9.14997 0.900811M9.14997 0.900811L9.14997 7.90147M9.14997 0.900811L0.900389 9.15039" stroke="url(#paint0_linear_2292_213)" stroke-opacity="0.7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2.04831 0.900912L9.14997 0.900811M9.14997 0.900811L9.14997 7.90147M9.14997 0.900811L0.900389 9.15039" stroke="url(#paint1_radial_2292_213)" stroke-opacity="0.4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<defs>
+<linearGradient id="paint0_linear_2292_213" x1="7.34118" y1="13.8234" x2="14.258" y2="0.957906" gradientUnits="userSpaceOnUse">
+<stop stop-color="#F14267" stop-opacity="0"/>
+<stop offset="1" stop-color="#F14267"/>
+</linearGradient>
+<radialGradient id="paint1_radial_2292_213" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(-3.29371 6.24292) rotate(-2.55571) scale(23.395 69.0316)">
+<stop offset="0.24" stop-color="#FA4CD4" stop-opacity="0.61"/>
+<stop offset="0.61" stop-color="#C0036E" stop-opacity="0"/>
+</radialGradient>
+</defs>
+</svg>

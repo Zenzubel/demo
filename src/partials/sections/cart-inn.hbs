@@ -1,0 +1,28 @@
+<div class="cart-inn">
+	<div class="cart-inn__wrapper cart-inn__wrapper--pt">
+		<div class="cart-inn__cards cart-inn__cards--column cart-inn__cards--gap">
+			{{> components/cart-card type1="true" modal-id1="#modal-about-good" }}
+			{{> components/cart-card type2="true" modal-id2="#modal-options" }}
+		</div>
+		<div class="cart-inn__total-block">
+			<div class="cart-inn__total-info">
+				<div class="cart-inn__good">
+					<div class="cart-inn__clear">
+						<button class="button button--null cart-inn__clear-button under-dotted">Очистить корзину</button>
+					</div>
+					<div class="cart-inn__goods-count">
+						Всего товаров:
+						<span class="cart-inn__goods-count-num">2</span>
+					</div>
+				</div>
+				<div class="cart-inn__sum">На сумму: <span class="cart-inn__sum-count">356 000</span><span
+						class="cart-inn__sum-curency">₽</span>
+				</div>
+			</div>
+			<div class="cart-inn__actions">
+				<button class="button button--type2 text-uppercase" type="button">Оформить заказ</button>
+				<a href="#" class="cart-inn__purchases">Продолжить покупки</a>
+			</div>
+		</div>
+	</div>
+</div>

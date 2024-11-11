@@ -1,0 +1,21 @@
+.card-info {
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    @media (max-width: $breakpoint-sm) {
+      gap: 1.5rem;
+    }
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    gap: 3.7rem;
+
+    @media (max-width: $breakpoint-sm) {
+      gap: 2.4rem;
+    }
+  }
+}

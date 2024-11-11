@@ -1,0 +1,21 @@
+.logo {
+  width: 100%;
+  min-width: 20rem;
+  max-width: 22.5rem;
+
+  @include max-width($breakpoint-md) {
+    min-width: 18rem;
+    max-width: 18rem;
+  }
+
+  @media (max-width: $breakpoint-sm) {
+    min-width: 12.8rem;
+    max-width: 12.8rem;
+  }
+
+  &__img {
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+}

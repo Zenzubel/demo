@@ -1,0 +1,25 @@
+.other {
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 8rem;
+
+    @include max-width($breakpoint-xxs-3) {
+      gap: 5.5rem;
+    }
+  }
+
+  &__block-desk {
+    @media (max-width: $breakpoint-sm) {
+      display: none;
+    }
+  }
+
+  &__block-mobile {
+    display: none;
+
+    @media (max-width: $breakpoint-sm) {
+      display: block;
+    }
+  }
+}

@@ -1,0 +1,23 @@
+.feedback-stars {
+  &__stars {
+    display: flex;
+    gap: 0.2rem;
+    align-items: center;
+    color: var(--gray-1600);
+  }
+
+  &__star {
+    color: var(--gray-1600);
+
+    svg {
+      width: 1.2rem;
+      min-width: 1.2rem;
+      height: 1.2rem;
+      min-height: 1.2rem;
+    }
+
+    &.active {
+      color: var(--accent-yell);
+    }
+  }
+}

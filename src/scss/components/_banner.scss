@@ -1,0 +1,17 @@
+.banner {
+  &__container {
+    overflow: hidden;
+
+    @include max-width($breakpoint-xxs-3) {
+      margin: 0 -1.2rem;
+    }
+  }
+
+  &__picture {
+    source,
+    img {
+      max-width: 100%;
+      object-fit: cover;
+    }
+  }
+}

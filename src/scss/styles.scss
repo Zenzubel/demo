@@ -1,0 +1,102 @@
+// Extensions - Расширения
+@import 'extensions/reset';
+
+// Libs - Библиотеки
+@import 'libs/libs';
+
+// Utils - Утилиты
+@import 'utils/functions';
+@import 'utils/mixins';
+
+// Variables - Переменные
+@import 'variables/colors';
+@import 'variables/variables';
+
+// Global - Глобальное
+@import 'global/root';
+@import 'global/fonts';
+@import 'global/global';
+@import 'global/typography';
+@import 'global/animations';
+@import 'global/scrollbar';
+@import 'global/default-sections';
+@import 'global/grid';
+
+// UI - Пользовательский интерфейс
+@import 'ui/button';
+@import 'ui/input';
+@import 'ui/checkbox';
+@import 'ui/radio';
+@import 'ui/switch';
+@import 'ui/slider-btn';
+@import 'ui/slider-paginate';
+@import 'ui/feedback-stars';
+@import 'ui/rating';
+
+// Components - Компоненты
+@import 'components/dropdown';
+@import 'components/select';
+@import 'components/modal';
+@import 'components/tooltip';
+@import 'components/tabs';
+@import 'components/accordion';
+@import 'components/logo';
+@import 'components/linkster';
+@import 'components/blur';
+@import 'components/cards-row';
+@import 'components/card';
+@import 'components/banner';
+@import 'components/banner-static';
+@import 'components/publications';
+@import 'components/prefooter';
+@import 'components/breadcrumbs';
+@import 'components/card-slider';
+@import 'components/card-info';
+@import 'components/have';
+@import 'components/product-title';
+@import 'components/options';
+@import 'components/order-options';
+@import 'components/types';
+@import 'components/table';
+@import 'components/specifications';
+@import 'components/brand';
+@import 'components/user-actions';
+@import 'components/card-tabs';
+@import 'components/have-images';
+@import 'components/video-block';
+@import 'components/materials';
+@import 'components/delivery';
+@import 'components/feedback';
+@import 'components/write';
+@import 'components/write-item';
+@import 'components/catalog-links';
+@import 'components/region';
+@import 'components/cart-card';
+@import 'components/filter-navigate';
+@import 'components/categories';
+@import 'components/category';
+@import 'components/arrange';
+@import 'components/count-informer';
+@import 'components/range';
+@import 'components/search-item';
+//
+// @import 'components/modals/example';
+
+// Layouts - Компоновка
+@import 'layouts/layouts';
+@import 'layouts/header';
+@import 'layouts/footer';
+
+// Sections - Секции
+@import 'sections/bar';
+@import 'sections/top-slider';
+@import 'sections/manufacturers';
+@import 'sections/cards';
+@import 'sections/other';
+@import 'sections/product-card';
+@import 'sections/confirm';
+@import 'sections/cart-inn';
+@import 'sections/comparison-inn';
+@import 'sections/brand-inn';
+@import 'sections/catalog-inn';
+@import 'sections/filtre-page';

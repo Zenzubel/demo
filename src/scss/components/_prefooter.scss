@@ -1,0 +1,27 @@
+.prefooter {
+  display: flex;
+  flex-direction: column;
+  gap: 9rem;
+
+  @include max-width($breakpoint-xxs-3) {
+    gap: 4.4rem;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 4.7rem;
+
+    @include max-width($breakpoint-xxs-3) {
+      gap: 3.6rem;
+    }
+  }
+
+  .cards-row__button {
+    display: none;
+
+    @media (max-width: $breakpoint-sm) {
+      display: block;
+    }
+  }
+}

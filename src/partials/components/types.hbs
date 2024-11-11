@@ -1,0 +1,49 @@
+{{#if oneItem}}
+<div class="types">
+	<div class="types__view">
+		<div class="types__circle types__circle--disabled">
+			<picture class="types__picture">
+				<source srcset="../../img/types/types.webp">
+				<img srcset="../../img/types/types.jpg" alt="Изображение продукта">
+			</picture>
+		</div>
+		<div class="types__radio">
+			<label class="radio2">
+				<input class="radio2__input" disabled type="radio" name="name1">
+				<div class="radio2__wrap">
+					<div class="radio2__custom"> </div>
+				</div>
+			</label>
+		</div>
+	</div>
+	{{#if text}}
+	<div class="types__text">{{text}}</div>
+	{{/if}}
+</div>
+{{else}}
+<div class="types">
+	<div class="types__view">
+		<div class="types__circle">
+			<picture class="types__picture">
+				<source srcset="../../img/types/types.webp">
+				<img srcset="../../img/types/types.jpg" alt="Изображение продукта">
+			</picture>
+		</div>
+		<div class="types__radio">
+			<label class="radio2">
+				{{#if checked}}
+				<input class="radio2__input" checked="true" type="radio" name="name1">
+				{{else}}
+				<input class="radio2__input" type="radio" name="name1">
+				{{/if}}
+				<div class="radio2__wrap">
+					<div class="radio2__custom"> </div>
+				</div>
+			</label>
+		</div>
+	</div>
+	{{#if text}}
+	<div class="types__text">{{text}}</div>
+	{{/if}}
+</div>
+{{/if}}

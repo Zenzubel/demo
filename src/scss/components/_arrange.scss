@@ -1,0 +1,36 @@
+.arrange {
+  &__body {
+    display: flex;
+    gap: 1.2rem;
+    align-items: center;
+
+    .button {
+      display: flex;
+      gap: 0.8rem;
+      align-items: center;
+      justify-content: space-between;
+
+      svg {
+        margin: 0;
+      }
+    }
+
+    .button span {
+      max-width: 11rem;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .button--catalog {
+      @include max-width($breakpoint-xxs-2) {
+        width: 100%;
+        min-width: auto;
+      }
+
+      @include max-width($breakpoint-xxs) {
+        padding: 1.2rem 1rem;
+      }
+    }
+  }
+}

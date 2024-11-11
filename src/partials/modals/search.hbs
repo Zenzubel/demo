@@ -1,0 +1,54 @@
+<div id="modal-search" class="modal-wrapper modal-wrapper--full modal-wrapper--example" data-modal>
+	<div class="modal modal--full modal--no-padding2">
+		<div class="modal__wrap">
+			<div class="modal__wrap-box">
+				<div class="modal__header">
+					<button class="button button--null button-close j_closeModal">{{> ui/svg id="close"}}</button>
+					Поиск
+				</div>
+				<div class="modal__body-input" data-search-scroll>
+					<div class="input-wrapper">
+						<div class="input-container">
+							<input type="text" class="input input--gray" placeholder="" data-search-input />
+							<button class="button button--null modal__search-magnifier">
+								{{> ui/svg id="search2"}}
+							</button>
+							<button class="button button--null modal__search-close" data-clear-input>
+								{{> ui/svg id="close3"}}
+							</button>
+						</div>
+						<label class="input-label"></label>
+						<p class="input-message input-message--valid"> Сообщение об успехе </p>
+						<p class="input-message input-message--invalid"> Сообщение об ошибке </p>
+					</div>
+					<div class="modal__body-found" data-found>Найдено: <span>34</span></div>
+				</div>
+			</div>
+
+			<div class="modal__body modal__body--width">
+
+				<div class="modal__body-notfound" data-notfound>
+					По запросу «<span>кукла</span>» ничего не найдено
+				</div>
+
+				<div class="modal__content modal__content--visible modal__content--pt" data-search-list>
+					<div class="modal__content-search">
+						{{> components/search-item }}
+						{{> components/search-item }}
+						{{> components/search-item }}
+						{{> components/search-item }}
+						{{> components/search-item }}
+						{{> components/search-item }}
+						{{> components/search-item }}
+						{{> components/search-item }}
+						{{> components/search-item }}
+						{{> components/search-item }}
+						{{> components/search-item }}
+						{{> components/search-item }}
+						{{> components/search-item }}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,73 @@
+.brand-inn {
+  &__content {
+    display: grid;
+    grid-template-rows: 0fr;
+    overflow: hidden;
+    transition: grid-template-rows 0.3s ease;
+
+    &.active {
+      grid-template-rows: 1fr;
+    }
+  }
+
+  &__content-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 3.2rem;
+    min-width: 0;
+    min-height: 27rem;
+  }
+
+  &__head,
+  &__paragraf {
+    font-weight: 500;
+    color: var(--gray-100);
+  }
+
+  &__more {
+    margin-top: 0.8rem;
+  }
+
+  &__more-btn {
+    font-size: 1.1rem;
+    color: var(--gray-500);
+  }
+
+  &__paragraf {
+    font-size: 1.3rem;
+    line-height: 1.38;
+  }
+
+  &__head {
+    margin: 1rem 0;
+    font-size: 1.6rem;
+  }
+
+  &__video-box {
+    overflow: hidden;
+    text-align: center;
+    border-radius: 0.6rem;
+
+    video,
+    source,
+    img {
+      display: inline-block;
+      max-width: 100%;
+      margin: 0 auto;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  &__item-picture {
+    overflow: hidden;
+    border-radius: 0.6rem;
+
+    source,
+    img {
+      max-width: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+}

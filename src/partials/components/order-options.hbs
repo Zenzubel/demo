@@ -1,0 +1,79 @@
+{{#if one}}
+<div class="order-options">
+	<div class="order-options__wrapper">
+		<div class="order-options__heading">
+			{{#if video}}
+			<div class="order-options__head" data-tippy="Сообщение">{{heading}} {{> ui/svg id="notice-opt"}}</div>
+			<div class="order-options__play-note">
+				{{> ui/svg id="play-note"}}Видео
+			</div>
+			{{else}}
+			<div class="order-options__head" data-tippy="Сообщение">{{heading}} {{> ui/svg id="notice-opt"}}</div>
+			{{/if}}
+		</div>
+		<div class="order-options__types">
+			{{> components/types text="Стандартный" oneItem="true" }}
+		</div>
+	</div>
+</div>
+{{else if two}}
+<div class="order-options">
+	<div class="order-options__wrapper">
+		<div class="order-options__heading">
+			{{#if video}}
+			<div class="order-options__head" data-tippy="Сообщение">{{heading}} {{> ui/svg id="notice-opt"}}</div>
+			<div class="order-options__play-note">
+				{{> ui/svg id="play-note"}}Видео
+			</div>
+			{{else}}
+			<div class="order-options__head" data-tippy="Сообщение">{{heading}} {{> ui/svg id="notice-opt"}}</div>
+			{{/if}}
+		</div>
+		<div class="order-options__types">
+			{{> components/types checked="true"}}
+			{{> components/types }}
+		</div>
+	</div>
+</div>
+{{else if tree}}
+<div class="order-options">
+	<div class="order-options__wrapper">
+		<div class="order-options__heading">
+			{{#if video}}
+			<div class="order-options__head" data-tippy="Сообщение">{{heading}} {{> ui/svg id="notice-opt"}}</div>
+			<div class="order-options__play-note">
+				{{> ui/svg id="play-note"}}Видео
+			</div>
+			{{else}}
+			<div class="order-options__head" data-tippy="Сообщение">{{heading}} {{> ui/svg id="notice-opt"}}</div>
+			{{/if}}
+		</div>
+		<div class="order-options__types">
+			{{> components/types checked="true"}}
+			{{> components/types }}
+			{{> components/types }}
+		</div>
+	</div>
+</div>
+{{else if four}}
+<div class="order-options">
+	<div class="order-options__wrapper">
+		<div class="order-options__heading">
+			{{#if video}}
+			<div class="order-options__head" data-tippy="Сообщение">{{heading}} {{> ui/svg id="notice-opt"}}</div>
+			<div class="order-options__play-note">
+				{{> ui/svg id="play-note"}}Видео
+			</div>
+			{{else}}
+			<div class="order-options__head" data-tippy="Сообщение">{{heading}} {{> ui/svg id="notice-opt"}}</div>
+			{{/if}}
+		</div>
+		<div class="order-options__types order-options__types--full-row">
+			{{> components/types text="EXP скелет" checked="true"}}
+			{{> components/types text="EXP скелет" }}
+			{{> components/types text="EXP скелет" }}
+			{{> components/types text="EXP скелет" }}
+		</div>
+	</div>
+</div>
+{{/if}}

@@ -1,0 +1,49 @@
+<div class="write {{#if active}}write--{{active}}{{/if}} {{class}}">
+	<div class="write__wrapper">
+		<div class="write__head">Оставить отзыв</div>
+
+		<form class="write__form" action="#">
+			<div class="write__starts">
+				{{#if centerStars}}
+				{{> ui/rating center="center"}}
+				{{else}}
+				{{> ui/rating}}
+				{{/if}}
+			</div>
+
+			<div class="write__form-body">
+				<div class="write__select write__width">
+					{{#if selectVar1}}
+					{{> components/write-item labelText="Опыт использования" placeholder="" select2="true"}}
+					{{else}}
+					{{> components/write-item labelText="Опыт использования" placeholder="" select="true"}}
+					{{/if}}
+				</div>
+				<div class="write__text">
+					{{> components/write-item labelText="Достоинства" textarea="true" type="textarea"}}
+				</div>
+
+				<div class="write__text">
+					{{> components/write-item labelText="Недостатки" textarea="true" type="textarea"}}
+				</div>
+
+				<div class="write__text">
+					{{> components/write-item labelText="Общее впечатление" textarea="true" type="textarea"}}
+				</div>
+
+				<div class="write__text write__width">
+					{{> components/write-item labelText="Представьтесь" type="text" input="true"}}
+				</div>
+			</div>
+			{{#if modal}}
+			<div class="write__button write__button--modal">
+				<button class="button button--type2 text-uppercase">Отправить</button>
+			</div>
+			{{else}}
+			<div class="write__button write__width">
+				<button class="button button--type2 text-uppercase">Отправить</button>
+			</div>
+			{{/if}}
+		</form>
+	</div>
+</div>

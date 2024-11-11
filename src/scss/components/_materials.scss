@@ -1,0 +1,61 @@
+.materials {
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    gap: 3.8rem;
+
+    @include max-width($breakpoint-xl) {
+      gap: 3rem;
+    }
+
+    @include max-width($breakpoint-xxs-3) {
+      gap: 1.2rem;
+    }
+  }
+
+  &__video-box {
+    overflow: hidden;
+    border-radius: 0.8rem;
+  }
+
+  &__video {
+    max-width: 100%;
+  }
+
+  &__about {
+    max-width: 85rem;
+    color: var(--gray-100);
+    text-align: left;
+  }
+
+  &__head {
+    margin: 0 0 1.8rem 0;
+    font-family: inherit;
+    font-size: 1.6rem;
+    font-weight: 600;
+
+    @include max-width($breakpoint-xxs-3) {
+      font-size: 1.3rem;
+      font-weight: 500;
+    }
+  }
+
+  &__pragraf {
+    font-family: inherit;
+    font-size: 1.3rem;
+    font-weight: 500;
+    line-height: 1.7;
+
+    @include max-width($breakpoint-xxs-3) {
+      color: black;
+    }
+  }
+
+  &__pragraf + &__pragraf {
+    margin: 2rem 0 0 0;
+
+    @include max-width($breakpoint-xxs-3) {
+      margin: 2rem 0 0 0;
+    }
+  }
+}

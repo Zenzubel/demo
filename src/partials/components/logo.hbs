@@ -1,0 +1,11 @@
+<a href="index.html" class="logo {{#if mod }} logo--{{ mod }}{{/if}}">
+	{{#if footer }}
+	<img src="../../img/logo/logo-footer.png" alt="Логотип компании">
+	{{else}}
+	<picture>
+		<source media="(max-width: 768px)" srcset="../../img/logo/logo-white.png">
+		<source srcset="../../img/logo/logo.png">
+		<img srcset="../../img/logo/logo.png" alt="Логотип компании">
+	</picture>
+	{{/if}}
+</a>

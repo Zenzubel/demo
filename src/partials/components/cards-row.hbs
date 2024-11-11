@@ -1,0 +1,119 @@
+<div class="cards-row">
+	<div class="cards-row__inner {{#if modInner}}cards-row__inner--{{modInner}}{{/if}}">
+		{{#if titleCount}}
+		<div class="cards-row__head">
+			<div
+				class="h3 cards-row__title {{#if modTitle}}cards-row__title--{{modTitle}}{{/if}} {{#if modTitleColor}}cards-row__title--{{modTitleColor}}{{/if}}">
+				{{titleText}}
+				<span class="cards-row__title-count">{{countNum}}</span>
+			</div>
+		</div>
+		{{else if emptyHead}}
+		{{else}}
+		<div class="cards-row__head">
+			<div
+				class="h3 cards-row__title {{#if modTitle}}cards-row__title--{{modTitle}}{{/if}} {{#if modTitleColor}}cards-row__title--{{modTitleColor}}{{/if}}">
+				{{titleText}}</div>
+		</div>
+		{{/if}}
+
+		<div class="cards-row__body">
+			<div class="cards-row__content">
+				<div
+					class="cards-row__row {{#if scroll}}cards-row__row--{{scroll}}{{/if}} {{#if flex}}cards-row__row--{{flex}}{{/if}} {{#if type}}cards-row__row--{{type}}{{/if}}">
+					{{#if inHave }}
+					{{> components/card have="true" have="true"}}
+					{{> components/card have="true" have="true"}}
+					{{> components/card have="true" have="true"}}
+					{{> components/card have="true" have="true"}}
+					{{> components/card have="true" have="true"}}
+					{{else if newProducts}}
+					{{> components/card new="true"}}
+					{{> components/card new="true"}}
+					{{> components/card new="true"}}
+					{{> components/card new="true"}}
+					{{> components/card new="true"}}
+					{{else if newProducts8}}
+					{{> components/card newPink="true" have="true"}}
+					{{> components/card newPink="true" have="true"}}
+					{{> components/card newPink="true" have="true"}}
+					{{> components/card newPink="true" have="true"}}
+					{{> components/card newPink="true" have="true"}}
+					{{> components/card newPink="true" have="true"}}
+					{{> components/card newPink="true" have="true"}}
+					{{> components/card newPink="true" have="true"}}
+					{{else if newProducts14}}
+					{{> components/card newPink="true" have="true"}}
+					{{> components/card newPink="true" have="true"}}
+					{{> components/card newPink="true" have="true"}}
+					{{> components/card newPink="true" have="true"}}
+					{{> components/card newPink="true" have="true"}}
+					{{> components/card newPink="true" have="true"}}
+					{{> components/card newPink="true" have="true"}}
+					{{> components/card newPink="true" have="true"}}
+					{{> components/card newPink="true" have="true"}}
+					{{> components/card newPink="true" have="true"}}
+					{{> components/card newPink="true" have="true"}}
+					{{> components/card newPink="true" have="true"}}
+					{{> components/card newPink="true" have="true"}}
+					{{> components/card newPink="true" have="true"}}
+					{{else if newProductsModal}}
+					{{> components/card newPink="true"}}
+					{{> components/card newPink="true"}}
+					{{> components/card newPink="true"}}
+					{{> components/card newPink="true"}}
+					{{> components/card newPink="true"}}
+					{{> components/card newPink="true"}}
+					{{else if hitSales}}
+					{{> components/card hit="true"}}
+					{{> components/card hit="true"}}
+					{{> components/card hit="true"}}
+					{{> components/card hit="true"}}
+					{{> components/card hit="true"}}
+					{{else if fourItems}}
+					{{> components/card have="true"}}
+					{{> components/card have="true"}}
+					{{> components/card have="true"}}
+					{{> components/card have="true"}}
+					{{else if sellout}}
+					{{> components/card sale="true" have="true" lowPrice="true"}}
+					{{> components/card sale="true" have="true" lowPrice="true"}}
+					{{> components/card sale="true" have="true" lowPrice="true"}}
+					{{> components/card sale="true" have="true" lowPrice="true"}}
+					{{> components/card sale="true" have="true" lowPrice="true"}}
+					{{else if dark}}
+					{{> components/card haveDark="true" nameDark="true" priceDark="dark" lowPriceDark="dark" contWidth="width"}}
+					{{> components/card haveDark="true" nameDark="true" priceDark="dark" lowPriceDark="dark" contWidth="width"}}
+					{{> components/card haveDark="true" nameDark="true" priceDark="dark" lowPriceDark="dark" contWidth="width"}}
+					{{> components/card haveDark="true" nameDark="true" priceDark="dark" lowPriceDark="dark" contWidth="width"}}
+					{{> components/card haveDark="true" nameDark="true" priceDark="dark" lowPriceDark="dark" contWidth="width"}}
+					{{else if dark8}}
+					{{> components/card haveDark="true" nameDark="true" priceDark="dark" lowPriceDark="dark" contWidth="width"}}
+					{{> components/card haveDark="true" nameDark="true" priceDark="dark" lowPriceDark="dark" contWidth="width"}}
+					{{> components/card haveDark="true" nameDark="true" priceDark="dark" lowPriceDark="dark" contWidth="width"}}
+					{{> components/card haveDark="true" nameDark="true" priceDark="dark" lowPriceDark="dark" contWidth="width"}}
+					{{> components/card haveDark="true" nameDark="true" priceDark="dark" lowPriceDark="dark" contWidth="width"}}
+					{{> components/card haveDark="true" nameDark="true" priceDark="dark" lowPriceDark="dark" contWidth="width"}}
+					{{> components/card haveDark="true" nameDark="true" priceDark="dark" lowPriceDark="dark" contWidth="width"}}
+					{{> components/card haveDark="true" nameDark="true" priceDark="dark" lowPriceDark="dark" contWidth="width"}}
+					{{else if publications}}
+					{{> components/publications title="Статьи"}}
+					{{else if publicationsVideo}}
+					{{> components/publications title="Видеообзоры" video="true"}}
+					{{/if}}
+				</div>
+			</div>
+		</div>
+
+		{{#if button }}
+		<div class="cards-row__button">
+			{{> ui/button mode="card" textClass="button--text-gradient" text="Показать все"}}
+		</div>
+		{{/if}}
+		{{#if buttonDark }}
+		<div class="cards-row__button">
+			{{> ui/button mode="catalog-dark" textClass="button--text-gradient" text="Показать все"}}
+		</div>
+		{{/if}}
+	</div>
+</div>

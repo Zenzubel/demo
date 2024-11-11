@@ -1,0 +1,101 @@
+.delivery {
+  &__wrapper {
+    max-width: 85rem;
+    padding: 1rem 0 0 0;
+    color: var(--gray-100);
+    text-align: left;
+  }
+
+  &__head {
+    font-size: 1.6rem;
+    font-weight: 600;
+  }
+
+  &__paragraf-weight {
+    font-weight: 600;
+  }
+
+  &__top,
+  &__bottom,
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1.7rem;
+  }
+
+  &__middle-head {
+    margin: 0 0 2.3rem 0;
+  }
+
+  &__middle-head,
+  &__company,
+  &__deadlines {
+    font-size: 1.4rem;
+    font-weight: 600;
+  }
+
+  &__deadlines {
+    margin: 0 0 0.8rem 0;
+  }
+
+  &__pay,
+  &__company {
+    color: black;
+  }
+
+  &__notice,
+  &__pay,
+  &__paragraf {
+    font-size: 1.3rem;
+    font-weight: 500;
+  }
+
+  &__pay {
+    margin: 1rem 0 0 0;
+  }
+
+  &__notice {
+    max-width: 23.7rem;
+    margin: 0.4rem 0 0 0;
+    color: var(--gray-500);
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 2.8rem;
+    counter-reset: section;
+  }
+
+  &__list-item {
+    position: relative;
+    max-width: 50rem;
+    padding: 0 0 0 3.2rem;
+    counter-increment: list1;
+
+    &::before {
+      --heihgt: 2rem;
+
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 0;
+      width: var(--heihgt);
+      height: var(--heihgt);
+      font-size: 1.3em;
+      line-height: var(--heihgt);
+      color: white;
+      text-align: center;
+      content: counter(section);
+      counter-increment: section;
+      background-color: black;
+      border-radius: 50%;
+    }
+  }
+
+  &__middle {
+    padding: 1.6rem 0 2.5rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.3);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  }
+}

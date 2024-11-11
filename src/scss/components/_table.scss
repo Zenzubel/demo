@@ -1,0 +1,89 @@
+.table {
+  &--width {
+    width: 100%;
+  }
+
+  &__body {
+    display: block;
+
+    &--padding {
+      padding: 0 0 0.5rem 0;
+
+      @include max-width($breakpoint-xxs-3) {
+        .table__tr > td {
+          &:first-child {
+            margin: 0 0 0 1.6rem;
+          }
+
+          &:last-child {
+            margin: 0 0 0 0.5rem;
+          }
+
+          height: 3.6rem;
+        }
+      }
+    }
+  }
+
+  &__tr {
+    display: flex;
+
+    &--border {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    svg {
+      flex: 0 0 1.8rem;
+      width: 1.8rem;
+      min-width: 1.8rem;
+      height: 1.8rem;
+      min-height: 1.8rem;
+      cursor: pointer;
+
+      @include max-width($breakpoint-xxs-3) {
+        width: 2.5rem;
+        min-width: 2.5rem;
+        height: 2.5rem;
+        min-height: 2.5rem;
+      }
+    }
+  }
+
+  &__tr > td {
+    display: flex;
+    flex: 0 1 50%;
+    align-items: center;
+    font-size: 1.4rem;
+
+    &:first-child {
+      margin: 0 0 0 1.2rem;
+      color: var(--gray-500);
+    }
+
+    &:last-child {
+      margin: 0 0 0 0.5rem;
+      color: var(--gray-100);
+    }
+
+    @include max-width($breakpoint-xxs-3) {
+      &:first-child,
+      &:last-child {
+        margin: 0;
+      }
+    }
+  }
+
+  &__td {
+    height: 3.6rem;
+    white-space: nowrap;
+    vertical-align: middle;
+
+    @include max-width($breakpoint-xxs-3) {
+      height: 3.7rem;
+    }
+  }
+
+  &__td-tippy {
+    margin: 0 0 0 1.3rem;
+  }
+}

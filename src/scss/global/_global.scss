@@ -1,0 +1,271 @@
+html {
+  color: var(--color-main);
+  background-color: var(--bg-color-main);
+  transition-timing-function: $transition-timing-function;
+  transition-duration: $transition-duration;
+  transition-property: background-color, color;
+
+  // &.transition-theme-animate {
+  //   html,
+  //   body,
+  //   a,
+  //   button {
+  //     transition-duration: 0s !important;
+  //   }
+  // }
+
+  &:not(.is-ready) {
+    * {
+      transition-duration: 0s !important;
+    }
+  }
+}
+
+body {
+  &.lock {
+    overflow: hidden;
+  }
+}
+
+picture {
+  display: block;
+
+  img {
+    width: 100%;
+  }
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+svg {
+  display: block;
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
+}
+
+.picture-ratio {
+  --ratio: 100%;
+
+  position: relative;
+
+  &::before {
+    display: block;
+    width: 100%;
+    padding-bottom: var(--ratio);
+    content: '';
+  }
+
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.swiper {
+  position: relative;
+  z-index: 1;
+  margin-right: auto;
+  margin-left: auto;
+
+  &--overflow {
+    overflow: hidden;
+  }
+
+  &--minwidth {
+    min-width: 0;
+  }
+}
+
+.swiper-wrapper {
+  z-index: 1;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transition-property: transform;
+}
+
+.swiper-slide {
+  flex-shrink: 0;
+  width: 100%;
+  height: 100%;
+  transition-property: transform;
+}
+
+.swiper-autoheight {
+  &,
+  .swiper-slide {
+    height: auto;
+  }
+
+  .swiper-wrapper {
+    align-items: flex-start;
+    transition-property: transform, height;
+  }
+}
+
+.text-gradient {
+  color: transparent;
+  background-image: linear-gradient(
+    135deg,
+    rgba(141, 65, 143, 1) 0,
+    rgba(141, 65, 143, 1) 40%,
+    rgba(241, 66, 103, 1) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.toc {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  width: 100%;
+  overflow: hidden;
+
+  &__head {
+    position: relative;
+    width: 100%;
+
+    &::before {
+      position: absolute;
+      bottom: 0.2rem;
+      left: 0;
+      width: 100%;
+      height: 0.2rem;
+      content: '';
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 2'%3E%3Crect fill='%23adadad' width='2' height='2'/%3E%3C/svg%3E");
+      background-repeat: repeat;
+      background-position: bottom;
+      background-size: 0.3rem 0.3rem;
+    }
+  }
+
+  &__head-inn {
+    position: relative;
+    z-index: 2;
+    padding-right: 1rem;
+  }
+
+  &__value {
+    display: flex;
+    gap: 0.3rem;
+    max-width: 100%;
+    padding-left: 1rem;
+    font-weight: 700;
+    white-space: nowrap;
+  }
+
+  &__head,
+  &__head-inn,
+  &__value {
+    background-color: white;
+  }
+}
+
+.under-dotted {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+    width: 100%;
+    height: 2px;
+    content: '';
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 2'%3E%3Crect fill='%23909090' width='2' height='2'/%3E%3C/svg%3E");
+    background-repeat: repeat;
+    background-position: bottom;
+    background-size: 0.3rem 0.3rem;
+    opacity: 1;
+    transition-duration: 0.3s;
+  }
+
+  &--black {
+    &::before {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 2'%3E%3Crect fill='black' width='2' height='2'/%3E%3C/svg%3E");
+    }
+  }
+
+  @media (any-hover: hover) {
+    &:hover {
+      &::before {
+        opacity: 0;
+      }
+    }
+  }
+}
+
+.cntr {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--gray-3300);
+  border-radius: 0.3rem;
+
+  .button,
+  .input {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: black;
+    text-align: center;
+  }
+
+  .button {
+    svg {
+      width: 1.6rem;
+      min-width: 1.6rem;
+      height: 1.6rem;
+      min-height: 1.6rem;
+    }
+  }
+
+  .input {
+    border-right: 1px solid var(--gray-3300);
+    border-left: 1px solid var(--gray-3300);
+
+    &:focus,
+    &[focus],
+    &.focus {
+      border-color: var(--gray-3300);
+    }
+  }
+
+  &__button {
+    position: relative;
+
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 10;
+      width: 100%;
+      height: 100%;
+      content: '';
+    }
+  }
+
+  &__button,
+  &__input {
+    width: 4rem;
+    min-width: 4rem;
+    height: 4rem;
+    min-height: 4rem;
+    color: black;
+  }
+}

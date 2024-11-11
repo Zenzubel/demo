@@ -1,0 +1,124 @@
+.cart-card {
+  &__operat {
+    width: 100%;
+
+    &--column {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &--gap {
+      gap: 1.4rem;
+    }
+  }
+
+  &__content {
+    position: relative;
+    display: flex;
+    gap: 1.6rem;
+    padding-bottom: 1.5rem;
+
+    &::before {
+      position: absolute;
+      bottom: 0;
+      left: calc((-100vw + 100%) / 2);
+      z-index: 0;
+      width: 100vw;
+      height: 1px;
+      content: '';
+      background-color: rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  &__picture-box {
+    max-width: 25rem;
+
+    @include max-width($breakpoint-xs) {
+      min-width: 7rem;
+      max-width: 7rem;
+    }
+  }
+
+  &__image-box {
+    &--column {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    &--gap {
+      gap: 1.3rem;
+    }
+  }
+
+  &__picture {
+    overflow: hidden;
+    border-radius: 0.6rem;
+  }
+
+  &__head {
+    max-width: 54rem;
+    overflow: hidden;
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: black;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    @include max-width($breakpoint-xs) {
+      max-width: 45rem;
+    }
+
+    @include max-width($breakpoint-xxs-1) {
+      max-width: 32rem;
+    }
+
+    @include max-width($breakpoint-xxs-2) {
+      max-width: 25rem;
+    }
+
+    @include max-width($breakpoint-xxs) {
+      max-width: 21rem;
+    }
+  }
+
+  &__quantity-price {
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: var(--gray-500);
+  }
+
+  &__quantity {
+    display: flex;
+    gap: 2.2rem;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__footer-about {
+    font-size: 1.1rem;
+    color: var(--gray-500);
+
+    &--black {
+      color: black;
+    }
+  }
+
+  &__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__footer-right {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: black;
+  }
+
+  &__footer-left {
+    display: flex;
+    gap: 0.8rem;
+    align-items: flex-end;
+  }
+}

@@ -1,0 +1,52 @@
+<div class="card-tabs">
+	<div class="card-tabs__wrapper">
+		<div class="card-tabs__controllers-block" data-tabs="card-tabs">
+
+			<div class="card-tabs__controllers">
+				<button class="button button--null button--tab button--tab-height card-tabs__control card-tabs__control--left"
+					data-tab="card-tab-1">
+					<span class="button__text button__text--tab">Фото в наличии</span>
+				</button>
+				<button
+					class="button button--null button--tab button--tab-height card-tabs__control card-tabs__control--right-md"
+					data-tab="card-tab-2">
+					<span class="button__text button__text--tab">Фото с фабрики</span>
+				</button>
+			</div>
+			<div class="card-tabs__controllers card-tabs__controllers--down">
+				<button
+					class="button button--null button--tab button--tab-height card-tabs__control card-tabs__control--left-md"
+					data-tab="card-tab-3">
+					<span class="button__text button__text--tab">Дополнительные материалы</span>
+				</button>
+				<button class="button button--null button--tab button--tab-height card-tabs__control" data-tab="card-tab-4">
+					<span class="button__text button__text--tab card-tabs__control-stars">Отзывы
+						<span class="button__text-variable card-tabs__text-variable">(2)</span>
+						{{> ui/feedback-stars}}
+					</span>
+				</button>
+				<button class="button button--null button--tab button--tab-height card-tabs__control card-tabs__control--right"
+					data-tab="card-tab-5">
+					<span class="button__text button__text--tab">Доставка и оплата</span>
+				</button>
+			</div>
+		</div>
+		<div class="card-tabs__content-box" data-tabs-contents="card-tabs">
+			<div class="card-tabs__item" data-tab-content="card-tab-1">
+				{{> components/have-images}}
+			</div>
+			<div class="card-tabs__item" data-tab-content="card-tab-2">
+				{{> components/have-images difrent="true"}}
+			</div>
+			<div class="card-tabs__item" data-tab-content="card-tab-3">
+				{{> components/materials}}
+			</div>
+			<div class="card-tabs__item" data-tab-content="card-tab-4">
+				{{> components/feedback}}
+			</div>
+			<div class="card-tabs__item" data-tab-content="card-tab-5">
+				{{> components/delivery}}
+			</div>
+		</div>
+	</div>
+</div>

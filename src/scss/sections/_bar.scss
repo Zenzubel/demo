@@ -1,0 +1,106 @@
+.bar {
+  @include max-width($breakpoint-md) {
+    $bar-height: 3.8rem;
+  }
+
+  @media (max-width: $breakpoint-sm) {
+    display: none;
+  }
+
+  &__wrapper {
+    width: 100%;
+    height: $bar-height;
+    background-color: var(--gray-100);
+  }
+
+  &__connection,
+  &__body,
+  &__list {
+    display: flex;
+
+    @media (max-width: $breakpoint-sm) {
+      display: block;
+    }
+  }
+
+  &__body {
+    gap: 3rem;
+    justify-content: space-between;
+    font-size: 0;
+  }
+
+  &__list {
+    gap: 3.5rem;
+
+    @include max-width($breakpoint-xl) {
+      padding: 0 30px 0 0;
+      overflow-x: auto;
+      &::-webkit-scrollbar {
+        display: none;
+        width: 0;
+      }
+    }
+  }
+
+  &__connection {
+    gap: 2.4rem;
+  }
+
+  &__link,
+  &__connection-link,
+  &__messenger-link {
+    height: 100%;
+    line-height: $bar-height;
+  }
+
+  &__link,
+  &__connection-link {
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: var(--gray-1800);
+    white-space: nowrap;
+    transition-duration: 0.3s;
+  }
+
+  &__messenger-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 4.8rem;
+    background: linear-gradient(to bottom, var(--green-100) 0%, var(--green-200) 100%);
+
+    .svg {
+      width: 2rem;
+      height: 2rem;
+      transition-duration: 0.3s;
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        .svg {
+          width: 2.1rem;
+          height: 2.1rem;
+        }
+      }
+    }
+  }
+
+  &__linker {
+    position: relative;
+
+    @include max-width($breakpoint-xl) {
+      overflow-x: auto;
+
+      &::before {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 5;
+        width: 30px;
+        height: 100%;
+        content: '';
+        background: linear-gradient(to right, rgba(18, 21, 23, 0) 0%, var(--gray-100) 100%);
+      }
+    }
+  }
+}

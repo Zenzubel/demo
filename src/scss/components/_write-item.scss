@@ -1,0 +1,21 @@
+.write-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+
+  &__text,
+  &__label-text {
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: black;
+  }
+
+  &__label-text {
+    text-align: left;
+  }
+
+  &__sup {
+    font-size: 1.5rem;
+    color: var(--violet-300);
+  }
+}

@@ -1,0 +1,97 @@
+{{#if comparison}}
+<div class="card">
+	<div class="card__container card__container--width2 card__container--gap">
+		<div class="card__image-box card__image-box--cart card__image-box--radius">
+			<picture class="card__picture">
+				<source media="(max-width: 430px)" srcset="../../img/comparison/cart-270.webp" type="image/webp">
+				<source srcset="../../img/comparison/cart-560.webp" type="image/webp">
+				<img srcset="../../img/comparison/cart-250.jpg" alt="Изображение продукта">
+			</picture>
+			<div class="card__activitys">
+				<div class="card__activitys-left">
+					<button class="card__play card__play--mini">
+						{{> ui/svg id="close"}}
+					</button>
+				</div>
+				<div class="card__activitys-right">
+					<button class="card__favorite card__favorite--mini favorite-card-js"></button>
+				</div>
+			</div>
+		</div>
+		<div class="card__descr card__descr--gap">
+			<div class="card__named card__named--font-mini card__named--row card__named--black">Секс кукла Кейт 165
+				с гигантской грудью</div>
+			<div class="card__status">
+				{{#if lowPrice}}
+				<div class="card__price-row low-price-js">
+					<span class="card__price">123 500<span class="card__currency">₽</span></span>
+					<span class="card__price-low">123 500<span class="card__currency-low">₽</span></span>
+				</div>
+				{{else}}
+				<span class="card__price">123 500<span class="card__currency">₽</span></span>
+				{{/if}}
+			</div>
+		</div>
+		<div class="card__incart-box">
+			<button class="button button--null card__incart button--text-gradient">В корзину</button>
+		</div>
+	</div>
+</div>
+{{else}}
+<div class="card">
+	<div class="card__container {{#if contWidth}}card__container--{{contWidth}}{{/if}}">
+		<div class="card__image-box">
+			<a href="#" class="card__link">
+				<picture class="card__picture">
+					<source srcset="../../img/product/product270.webp">
+					<img srcset="../../img/product/product270.jpg" alt="Изображение продукта">
+				</picture>
+			</a>
+			<div class="card__activitys">
+				<div class="card__activitys-left">
+					{{#if new}}
+					<span class="card__label card__label--black">Новинка</span>
+					{{else if newPink}}
+					<span class="card__label card__label--pink">Новинка</span>
+					{{else if hit}}
+					<span class="card__label card__label--pink">Хит продаж</span>
+					{{else if sale}}
+					<span class="card__label card__label--sale">Распродажа</span>
+					{{/if}}
+					<button class="card__play">
+						{{> ui/svg id="play"}}
+					</button>
+				</div>
+				<div class="card__activitys-right">
+					<button class="card__favorite favorite-card-js"></button>
+				</div>
+			</div>
+		</div>
+		<div class="card__descr">
+			<div class="card__status">
+				{{#if have}}
+				{{> components/have inStock="true"}}
+				{{else if haveDark}}
+				{{> components/have insSockDark="true"}}
+				{{else}}
+				{{> components/have underOrder="true"}}
+				{{/if}}
+				{{#if lowPrice}}
+				<div class="card__price-row {{#if lowPriceDark}}card__price-row--{{lowPriceDark}}{{/if}} low-price-js">
+					<span class="card__price">123 500<span class="card__currency">₽</span></span>
+					<span class="card__price-low">123 500<span class="card__currency-low">₽</span></span>
+				</div>
+				{{else}}
+				<span class="card__price {{#if priceDark}}card__price--{{priceDark}}{{/if}}">123 500<span
+						class="card__currency">₽</span></span>
+				{{/if}}
+			</div>
+			{{#if nameDark }}
+			<div class="card__named card__named--dark">Секс кукла Кейт 165 с&nbsp;гигантской грудью</div>
+			{{else}}
+			<div class="card__named">Секс кукла Кейт 165 с&nbsp;гигантской грудью</div>
+			{{/if}}
+		</div>
+	</div>
+</div>
+{{/if}}

@@ -1,0 +1,200 @@
+.brand {
+  --max-width: 39.4rem;
+
+  @include max-width($breakpoint-md) {
+    --max-width: 25.6rem;
+  }
+
+  @include max-width($breakpoint-xxs) {
+    --max-width: 22rem;
+  }
+
+  width: 100%;
+  width: 52rem;
+  min-width: 52rem;
+  height: 22rem;
+
+  @include max-width($breakpoint-md) {
+    width: 45rem;
+    min-width: 45rem;
+  }
+
+  @include max-width($breakpoint-xxs-3) {
+    width: 100%;
+    min-width: 29rem;
+  }
+
+  &__wrapper {
+    position: relative;
+    padding: 2rem 2rem 2.7rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+
+    &::after,
+    &::before {
+      position: absolute;
+      content: '';
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+    }
+
+    &::after {
+      top: 0;
+      left: 0;
+      z-index: 2;
+      width: 100%;
+      height: 100%;
+      background-image: url('../img/svg/brand-bg.svg');
+
+      @include max-width($breakpoint-md) {
+        background-image: url('../img/svg/brand-bg-md.svg');
+      }
+
+      @include max-width($breakpoint-xxs-3) {
+        background-image: url('../img/svg/brand-bg-480.svg');
+        background-position: left center;
+        background-size: contain;
+      }
+
+      @include max-width(430px) {
+        background-image: url('../img/svg/brand-bg-430.svg');
+      }
+
+      @include max-width($breakpoint-xxs-2) {
+        background-image: url('../img/svg/brand-bg-375.svg');
+      }
+
+      @include max-width(360px) {
+        background-image: url('../img/svg/brand-bg-360.svg');
+      }
+
+      @include max-width($breakpoint-xxs) {
+        background-image: url('../img/svg/brand-bg-320.svg');
+      }
+    }
+
+    &::before {
+      top: 0.7rem;
+      right: 0;
+      z-index: 1;
+      width: 7.7rem;
+      height: 7.7rem;
+      background-image: url('../img/brand/btand-logo.png');
+
+      @include max-width($breakpoint-md) {
+        width: 6.7rem;
+        height: 6.7rem;
+      }
+
+      @media (max-width: $breakpoint-sm) {
+        top: 0;
+        right: 0.7rem;
+      }
+
+      @include max-width($breakpoint-xxs-2) {
+        top: 0.7rem;
+        width: 5.7rem;
+        height: 5.7rem;
+      }
+
+      @include max-width($breakpoint-xxs) {
+        right: 0.3rem;
+        width: 5.5rem;
+        height: 5.5rem;
+      }
+    }
+  }
+
+  &__inner {
+    position: relative;
+    z-index: 5;
+  }
+
+  &__body {
+    max-width: var(--max-width);
+  }
+
+  &__head {
+    margin: 0 0 1.3rem 0;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--gray-100);
+  }
+
+  &__paragraf,
+  &__list-item,
+  &__link-more {
+    font-size: 1.3rem;
+    font-weight: 500;
+  }
+
+  &__paragraf {
+    &--over {
+      display: -webkit-box;
+      overflow: hidden;
+      -webkit-line-clamp: 6;
+      line-clamp: 6;
+      -webkit-box-orient: vertical;
+    }
+  }
+
+  &__list {
+    @include max-width($breakpoint-md) {
+      display: none;
+    }
+  }
+
+  &__list-item {
+    position: relative;
+    padding: 0 0 0 2rem;
+
+    &::before {
+      position: absolute;
+      top: 0.8rem;
+      left: 1rem;
+      z-index: 0;
+      width: 0.3rem;
+      height: 0.3rem;
+      content: '';
+      background-color: var(--gray-100);
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    &--over {
+      width: var(--max-width);
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  }
+
+  &__link-more {
+    display: flex;
+    align-items: center;
+    margin: 2rem 0 0 0;
+    transition-duration: 0.3s;
+
+    svg {
+      width: 1.2rem;
+      min-width: 1.2rem;
+      height: 1rem;
+      min-height: 1rem;
+      margin: 0 0 0 0.7rem;
+      transition-duration: 0.3s;
+      transform: translate(0, 0.1rem);
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        color: var(--violet-200);
+
+        svg {
+          transform: translate(0.3rem, 0.1rem);
+        }
+      }
+    }
+  }
+}

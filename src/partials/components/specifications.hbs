@@ -1,0 +1,65 @@
+<div class="specifications">
+	<div class="specifications__wrapper">
+		<div class="specifications__opened">
+			<div class="specifications__head">
+				<button class="button button--null specifications__button specifications-btn-js">{{> ui/svg
+					id="specifications" class="specifications__svg"}}
+					Характеристики</button>
+			</div>
+			<div class="specifications__table specifications-js">
+				<table class="table table--width">
+					<tbody class="table__body table__body--padding">
+						<tr class="table__tr">
+							<td class="table__td">Артикул</td>
+							<td class="table__td">4365755675678</td>
+						</tr>
+						<tr class="table__tr">
+							<td class="table__td">Материал</td>
+							<td class="table__td">Силикон</td>
+						</tr>
+						<tr class="table__tr">
+							<td class="table__td">Скелет</td>
+							<td class="table__td">Металлический</td>
+						</tr>
+						<tr class="table__tr">
+							<td class="table__td">Вес</td>
+							<td class="table__td">2 кг</td>
+						</tr>
+						<tr class="table__tr">
+							<td class="table__td">Коллекция</td>
+							<td class="table__td">Название коллекции</td>
+						</tr>
+						<tr class="table__tr">
+							<td class="table__td">Оральное отверстие</td>
+							<td class="table__td">12 см</td>
+						</tr>
+						<tr class="table__tr">
+							<td class="table__td">Комплектация</td>
+							<td class="table__td">Парик</td>
+						</tr>
+						<tr class="table__tr">
+							<td class="table__td">Страна производства</td>
+							<td class="table__td">Китай</td>
+						</tr>
+						<tr class="table__tr">
+							<td class="table__td">Упаковка</td>
+							<td class="table__td">Картонная коробка</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<button class="button button--null button--specifications specifications__button specifications__more"
+			data-modal-target="#modal-materials">{{> ui/svg
+			id="more" class="specifications__svg"}}
+			Дополнительные материалы</button>
+		<button class="button button--null button--specifications specifications__button specifications__more"
+			data-modal-target="#modal-feedback">{{> ui/svg
+			id="message" class="specifications__svg"}}
+			Отзывы {{> ui/feedback-stars}} <span class="specifications__feed-count">2</span></button>
+		<button class="button button--null button--specifications specifications__button specifications__more"
+			data-modal-target="#modal-delivery">{{> ui/svg
+			id="marker" class="specifications__svg"}}
+			Доставка и оплата</button>
+	</div>
+</div>

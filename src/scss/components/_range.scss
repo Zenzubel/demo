@@ -1,0 +1,122 @@
+.range {
+  overflow: hidden;
+
+  &__wrapper {
+    max-width: 48rem;
+    margin: 0 auto;
+  }
+
+  .noUi-target {
+    padding: 0 2rem 0 0;
+    background: var(--gray-3200);
+    border: 0;
+    border-radius: 2rem;
+    box-shadow: none;
+  }
+
+  .noUi-horizontal {
+    height: 0.4rem;
+    margin: 2rem 0 3rem;
+  }
+  .noUi-connect {
+    background-color: var(--violet-300);
+  }
+
+  .noUi-horizontal .noUi-handle {
+    top: -50%;
+    right: -2rem;
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+    background-color: var(--gray-100);
+    border: 0;
+    border-radius: 50%;
+    box-shadow: none;
+    transform: translateY(-43%);
+
+    &::before,
+    &::after {
+      display: none;
+    }
+  }
+
+  &__pipses {
+    display: flex;
+    gap: 1.3rem;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--gray-800);
+
+    &--child {
+      :first-child,
+      :last-child {
+        position: relative;
+        padding-left: 0.7rem;
+
+        &::before {
+          position: absolute;
+          top: 50%;
+          left: 0;
+          z-index: 0;
+          font-size: 1.1rem;
+          font-weight: 600;
+          color: var(--gray-800);
+          transform: translate(0, -50%);
+        }
+      }
+
+      :first-child {
+        &::before {
+          content: '<';
+        }
+      }
+
+      :last-child {
+        &::before {
+          content: '>';
+        }
+      }
+    }
+  }
+
+  &__label {
+    position: relative;
+
+    &::before {
+      position: absolute;
+      top: 50%;
+      left: 1.2rem;
+      z-index: 0;
+      font-size: 1.4rem;
+      color: var(--gray-800);
+      content: attr(data-text);
+      transform: translate(0, -57%);
+    }
+  }
+
+  &__inputs {
+    display: flex;
+    gap: 0.8rem;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+  &__input {
+    &.input {
+      width: 100%;
+      padding: 1.2rem 1rem;
+      font-size: 1.4rem;
+      font-weight: 500;
+      color: var(--gray-100);
+    }
+
+    &--mod {
+      &.input {
+        padding: 1.2rem 1rem 1.2rem 3.3rem;
+      }
+    }
+  }
+}

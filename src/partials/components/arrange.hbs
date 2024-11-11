@@ -1,0 +1,18 @@
+<div class="arrange">
+	<div class="arrange__body {{#if mod}}arrange__body--{{mod}}{{/if}}">
+		{{#if type1}}
+		<button class="button button--null button--catalog">
+			<span class="button--text-gradient">По уменьшению цены</span>
+			{{> ui/svg id="decrease"}}
+		</button>
+		<button class="button button--null button--catalog button--catalog-pd">
+			<span class="button--text-gradient">Фильтр</span>
+			<span class="button--catalog-box">
+				{{> components/count-informer mod="mini"}}
+				{{> ui/svg id="chevron-right"}}
+			</span>
+		</button>
+		{{else if type2}}
+		{{/if}}
+	</div>
+</div>

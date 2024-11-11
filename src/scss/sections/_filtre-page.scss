@@ -1,0 +1,134 @@
+.filtre-page {
+  position: relative;
+
+  &__header,
+  &__footer {
+    position: fixed;
+    z-index: 10;
+  }
+
+  &__header {
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    height: 4.8rem;
+
+    &::before {
+      position: absolute;
+      top: 0;
+      right: calc((-100vw + 100%) / 2);
+      z-index: -1;
+      width: 100vw;
+      height: 100%;
+      content: '';
+      background: linear-gradient(to right, var(--violet-200) 0%, var(--violet-600) 100%);
+    }
+  }
+
+  &__header-inn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 48rem;
+    margin: 0 auto;
+  }
+
+  &__header-left {
+    display: flex;
+    gap: 1.2rem;
+    align-items: center;
+    padding: 0 0 0 0.6rem;
+
+    @include max-width($breakpoint-xxs-3) {
+      padding: 0;
+    }
+  }
+
+  &__back {
+    .button {
+      display: flex;
+      align-items: center;
+      width: 4.8rem;
+      min-width: 4.8rem;
+      height: 4.8rem;
+      min-height: 4.8rem;
+
+      svg {
+        width: 1.8rem;
+        min-width: 1.8rem;
+        height: 1.6rem;
+        min-height: 1.6rem;
+      }
+    }
+  }
+
+  &__header-right {
+    .button {
+      height: 4.8rem;
+      padding: 0 1.2rem;
+      font-size: 1.3rem;
+      color: white;
+
+      svg {
+        width: 1.1rem;
+        min-width: 1.1rem;
+        height: 1.1rem;
+        min-height: 1.1rem;
+        margin: 0 0.8rem 0 0;
+      }
+
+      &:hover {
+        color: white;
+      }
+    }
+  }
+
+  &__counter {
+    display: flex;
+    gap: 0.8rem;
+    align-items: center;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: white;
+  }
+
+  &__content {
+    &--column {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &--gap {
+      gap: 1.5rem;
+    }
+  }
+
+  &__heading {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: black;
+  }
+
+  &__filter {
+    &--column {
+      display: flex;
+      flex-direction: column;
+      gap: 0.95rem;
+    }
+  }
+
+  &__footer {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 0.8rem 1.2rem;
+    text-align: center;
+    background-color: var(--gray-2800);
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+
+    .button--type2 {
+      max-width: 48rem;
+    }
+  }
+}

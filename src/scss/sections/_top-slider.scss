@@ -1,0 +1,9 @@
+.top-slider {
+  min-width: 0;
+  overflow: hidden;
+  border-radius: 1.2rem;
+
+  @include max-width($breakpoint-xs) {
+    border-radius: 0;
+  }
+}

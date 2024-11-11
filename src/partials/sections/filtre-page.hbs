@@ -1,0 +1,65 @@
+<section class="default-section default-section--mobile-only2 default-section--pd1">
+	<div class="default-section__wrapper">
+		<div class="container">
+			<div class="default-section__inner filtre-page">
+				<div class="default-section__head filtre-page__header">
+					<div class="filtre-page__header-inn">
+						<div class="filtre-page__header-left">
+							<div class="filtre-page__back">
+								<button class="button button--null">
+									{{> ui/svg id="arr-back"}}
+								</button>
+							</div>
+							<div class="filtre-page__counter">Фильтр {{> components/count-informer }}</div>
+						</div>
+						<div class="filtre-page__header-right">
+							<button class="button button--null">{{> ui/svg id="close2"}} Очистить</button>
+						</div>
+					</div>
+				</div>
+				<div class="default-section__body default-section__body--column default-section__body--gap1">
+					<div class="filtre-page__content filtre-page__content--column filtre-page__content--gap">
+						<div class="filtre-page__heading">Цена, ₽</div>
+						<div class="filtre-page__filter">
+							{{> components/range type1="true" }}
+						</div>
+					</div>
+					<div class="filtre-page__content filtre-page__content--column filtre-page__content--gap">
+						<div class="filtre-page__heading">Материал</div>
+						<div class="filtre-page__filter filtre-page__filter--column">
+							{{> components/filter-check text="Пенополиуретан"}}
+							{{> components/filter-check text="Пенополиуретан"}}
+							{{> components/filter-check text="Пенополиуретан"}}
+							{{> components/filter-check text="Пенополиуретан"}}
+							{{> components/filter-check text="Пенополиуретан"}}
+							{{> components/filter-check text="Пенополиуретан"}}
+						</div>
+					</div>
+					<div class="filtre-page__content filtre-page__content--column filtre-page__content--gap">
+						<div class="filtre-page__heading">Объем, см</div>
+						<div class="filtre-page__filter">
+							{{> components/range type2="true" }}
+						</div>
+					</div>
+					<div class="filtre-page__content filtre-page__content--column filtre-page__content--gap">
+						<div class="filtre-page__heading">Скелет</div>
+						<div class="filtre-page__filter filtre-page__filter--column">
+							{{> components/filter-check text="Пластиковый"}}
+							{{> components/filter-check text="Металлический"}}
+							{{> components/filter-check text="Пластиковый"}}
+							{{> components/filter-check text="Металлический"}}
+							{{> components/filter-check text="Пластиковый"}}
+							{{> components/filter-check text="Металлический"}}
+						</div>
+					</div>
+
+				</div>
+				<div class="default-section__footer">
+					<div class="filtre-page__footer">
+						<button class="button button--type2 text-uppercase">Показать (<span>45</span>)</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

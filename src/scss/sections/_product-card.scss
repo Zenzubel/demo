@@ -1,0 +1,85 @@
+.product-card {
+  &__wrapper {
+    display: flex;
+    gap: 4rem;
+  }
+
+  &__main {
+    display: flex;
+    gap: 4rem;
+
+    .card-slider {
+      flex: 1 1 52%;
+    }
+
+    .card-info {
+      flex: 1 1 48.5%;
+    }
+
+    @include max-width($breakpoint-lg) {
+      gap: 2.5rem;
+
+      .card-slider,
+      .card-info {
+        flex: 0 1 50%;
+      }
+    }
+
+    @media (max-width: $breakpoint-sm) {
+      display: block;
+    }
+  }
+
+  &__left {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    gap: 6.5rem;
+    min-width: 0;
+    max-width: 112rem;
+
+    @include max-width($breakpoint-lg) {
+      max-width: 100%;
+    }
+
+    @include max-width($breakpoint-xxs-3) {
+      gap: 2.5rem;
+    }
+  }
+
+  &__right {
+    flex: 0 0 27rem;
+    width: 100%;
+
+    @include max-width($breakpoint-lg) {
+      display: none;
+    }
+  }
+
+  &__incart-box {
+    display: none;
+
+    .button--type2 {
+      max-width: 100%;
+    }
+
+    @media (max-width: $breakpoint-sm) {
+      display: block;
+      width: 100%;
+      padding: 0.8rem 1.2rem;
+      background-color: var(--gray-2800);
+      border-top: 1px solid rgba(0, 0, 0, 0.1);
+
+      &.active {
+        display: none;
+      }
+    }
+  }
+
+  &__incart {
+    position: sticky;
+    bottom: 0;
+    z-index: 7;
+    margin: 0 -1.2rem;
+  }
+}

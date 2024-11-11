@@ -1,0 +1,49 @@
+.write {
+  display: none;
+
+  &.active {
+    display: block;
+  }
+
+  &--active {
+    display: block;
+  }
+
+  &__head {
+    margin: 0 0 2rem 0;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: black;
+  }
+
+  &__width {
+    max-width: 40rem;
+  }
+
+  &__form {
+    gap: 3.4rem;
+  }
+
+  &__form,
+  &__form-body {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__form-body {
+    gap: 2.5rem;
+  }
+
+  &__button {
+    .button--type2 {
+      max-width: 100%;
+    }
+
+    &--modal {
+      padding: 0.8rem 1.6rem;
+      margin: 0 -1.2rem;
+      background-color: var(--gray-2800);
+      border-top: 1px solid rgba(0, 0, 0, 0.2);
+    }
+  }
+}

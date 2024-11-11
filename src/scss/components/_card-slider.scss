@@ -1,0 +1,67 @@
+.card-slider {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  min-width: 0;
+
+  @media (max-width: $breakpoint-sm) {
+    gap: 2rem;
+  }
+
+  @include max-width($breakpoint-xxs-3) {
+    margin: 0 -1.2rem;
+  }
+
+  &__container {
+    &--btn {
+      .slider-btn__button--next {
+        right: 0.4rem;
+      }
+
+      .slider-btn__button--prev {
+        left: 0.4rem;
+      }
+
+      @include max-width($breakpoint-xxs-3) {
+        .slider-btn__button {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &__thumb {
+    .swiper-wrapper {
+      flex-wrap: wrap;
+      row-gap: 2.8rem;
+      column-gap: 2rem;
+      margin: 0;
+
+      @media (max-width: $breakpoint-sm) {
+        row-gap: 1.5rem;
+        column-gap: 2.1rem;
+      }
+    }
+
+    .swiper-slide {
+      width: 100%;
+      max-width: 12.3rem;
+      transition-duration: 0.3s;
+      transform: scale(1);
+
+      @media (max-width: $breakpoint-sm) {
+        max-width: 8.8rem;
+      }
+
+      @media (any-hover: hover) {
+        &:hover {
+          transform: scale(1.03);
+        }
+      }
+    }
+
+    @media (max-width: $breakpoint-xxs-3) {
+      display: none;
+    }
+  }
+}

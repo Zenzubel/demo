@@ -1,0 +1,221 @@
+<div class="region">
+	<div class="region__wrapper region__wrapper--column region__wrapper--gap">
+		<div class="region__body">
+			<form class="region__form region__form--column region__form--gap">
+				<div class="region__item region__item--column region__item--gap">
+					<div class="region__head">Регион доставки</div>
+					<div class="region__place region__place--column region__place--gap">
+						<span class="region__label-span">Местоположение</span>
+						<label for="" class="region__label">
+							<button class="button button--null button--region region__button-search">
+								{{> ui/svg id="search2"}}
+							</button>
+							<input type="text" value="" class="input region__input region__input--search region-input-js"
+								placeholder="Выбрать">
+						</label>
+						<ul class="region__place-list region-list-js">
+							<li class="region__place-item" data-place="Москва"></li>
+							<li class="region__place-item" data-place="Питер"></li>
+							<li class="region__place-item" data-place="Казань"></li>
+							<li class="region__place-item" data-place="Вологда"></li>
+							<li class="region__place-item" data-place="Новосибирск"></li>
+							<li class="region__place-item" data-place="Владивосток"></li>
+						</ul>
+					</div>
+					<div class="region__place region__place--column region__place--gap">
+						<span class="region__label-span">Индекс</span>
+						<label for="" class="region__label">
+							<input type="text" value="" class="input region__input" placeholder="">
+						</label>
+					</div>
+				</div>
+
+				<div class="region__item region__item--column region__item--gap2">
+					<div class="region__head">Доставка</div>
+					<div class="region__place region__place--column region__place--gap2">
+						<div class="region__radio region__radio--pd" data-listen>
+							<div class="region__radio-left">
+								<span class="region__radio-icon">
+									<img src="../../img/order/delline-icon.png" class="region__radio-icon-img" width="48" height="48"
+										alt="Логотип компании 'Деловые линии'">
+								</span>
+								<div class="region__company-info">
+									<div class="region__company">Деловые линии</div>
+									<div class="region__price">
+										<span class="region__price-num">500</span>
+										<span class="region__price-curency">₽</span>
+									</div>
+								</div>
+							</div>
+							<div class="region__check-box">
+								{{> components/checker radio="true" name="name1"}}
+							</div>
+						</div>
+						<div class="region__radio region__radio--pd" data-listen>
+							<div class="region__radio-left">
+								<span class="region__radio-icon">
+									<img src="../../img/order/doll-icon.png" class="region__radio-icon-img" width="48" height="48"
+										alt="Логотип компании 'SexdollShop'">
+								</span>
+								<div class="region__company-info">
+									<div class="region__company">Курьер</div>
+									<div class="region__price">
+										<span class="region__price-free">Бесплатно</span>
+										<span class="region__price-num disabled">500</span>
+										<span class="region__price-curency disabled">₽</span>
+									</div>
+								</div>
+							</div>
+							<div class="region__check-box">
+								{{> components/checker radio="true" name="name1"}}
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="region__item region__item--column region__item--gap2">
+					<div class="region__head">Оплата</div>
+					<div class="region__place region__place--column region__place--gap2">
+						<div class="region__radio" data-listen>
+							<div class="region__radio-left">
+								<span class="region__radio-icon region__radio-icon--svg region__radio-icon--bg">
+									{{> ui/svg id="wallet-Icon"}}
+								</span>
+								<div class="region__company-info">
+									<div class="region__company">Наличные</div>
+								</div>
+							</div>
+							<div class="region__check-box">
+								{{> components/checker radio="true" name="name2"}}
+							</div>
+						</div>
+						<div class="region__radio" data-listen>
+							<div class="region__radio-left">
+								<span class="region__radio-icon region__radio-icon--svg region__radio-icon--bg">
+									{{> ui/svg id="bank-Icon"}}
+								</span>
+								<div class="region__company-info">
+									<div class="region__company">Банковский перевод</div>
+								</div>
+							</div>
+							<div class="region__check-box">
+								{{> components/checker radio="true" name="name2"}}
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="region__item region__item--column region__item--gap">
+					<div class="region__head">Покупатель</div>
+					<div class="region__place region__place--column region__place--gap">
+						<div class="region__dinamic-info-box">
+							<span class="region__label-span">ФИО</span>
+							<span class="region__dinamic-info active">Заполните поле</span>
+						</div>
+						<label for="" class="region__label">
+							<input type="text" value="" class="input region__input error" placeholder="">
+						</label>
+					</div>
+					<div class="region__place region__place--column region__place--gap">
+						<div class="region__dinamic-info-box">
+							<span class="region__label-span">E-Mail</span>
+							<span class="region__dinamic-info">Заполните поле</span>
+						</div>
+						<label for="" class="region__label">
+							<input type="email" value="" class="input region__input" placeholder="">
+						</label>
+					</div>
+					<div class="region__place region__place--column region__place--gap">
+						<div class="region__dinamic-info-box">
+							<span class="region__label-span">Телефон</span>
+							<span class="region__dinamic-info">Заполните поле</span>
+						</div>
+						<label for="" class="region__label">
+							<input data-inputmask="'mask': '+ 7 999 999-99-99'" type="tel" class="input region__input j_mask"
+								placeholder="+7" />
+						</label>
+					</div>
+					<div class="region__place region__place--column region__place--gap">
+						<div class="region__dinamic-info-box">
+							<span class="region__label-span">Адрес доставки</span>
+							<span class="region__dinamic-info">Заполните поле</span>
+						</div>
+						<label for="" class="region__label">
+							<textarea rows="3" class="textarea region__input" placeholder=""></textarea>
+						</label>
+					</div>
+					<div class="region__place region__place--column region__place--gap">
+						<span class="region__label-span">Комментарии к заказу <span class="region__label-span-light">(необязательное
+								поле)</span></span>
+						<label for="" class="region__label">
+							<textarea rows="3" class="textarea region__input" placeholder=""></textarea>
+						</label>
+					</div>
+				</div>
+
+				<div class="region__item region__item--column region__item--gap2">
+					<div class="region__head">Заказ</div>
+					<div class="region__total">
+						<ul class="region__total-list">
+							<li class="region__total-item toc">
+								<div class="region__total-head toc__head">
+									<span class="region__total-head-inn toc__head-inn">
+										<span>3</span>
+										<span>товара</span>
+										<span>на сумму</span>
+									</span>
+								</div>
+								<div class="region__total-value toc__value">
+									<span class="region__total-value-sum toc__value-sum">356 000</span>
+									<span class="region__total-value-corency">₽</span>
+								</div>
+							</li>
+							<li class="region__total-item toc">
+								<div class="region__total-head toc__head">
+									<span class="region__total-head-inn toc__head-inn">
+										Доставка курьером
+									</span>
+								</div>
+								<div class="region__total-value toc__value">
+									<span class="region__total-value-sum toc__value-sum">0</span>
+									<span class="region__total-value-corency">₽</span>
+								</div>
+							</li>
+							<li class="region__total-item toc">
+								<div class="region__total-head toc__head">
+									<span class="region__total-head-inn toc__head-inn">
+										Оплата
+									</span>
+								</div>
+								<div class="region__total-value toc__value">
+									Наличные
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="region__submit-box">
+					<span class="region__error-submit">
+						<div class="region__error-submit-head">Не заполнены поля:</div>
+						<ul class="region__error-submit-list">
+							<li class="region__error-submit-item">телефон</li>
+							<li class="region__error-submit-item">e-mail</li>
+						</ul>
+					</span>
+					<button class="button button--type2 text-uppercase region__submit" type="submit">Заказать</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+
+{{!-- нужен только для демонстрации окна с ошибкой отправки формы --}}
+<script>
+	const form = document.querySelector('form');
+	const fffff = document.querySelector('.region__error-submit');
+	form.addEventListener('submit', (e) => {
+		e.preventDefault();
+		fffff.classList.toggle('active');
+	})
+</script>

@@ -1,0 +1,90 @@
+.specifications {
+  &__wrapper {
+    @media (max-width: $breakpoint-sm) {
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+  }
+
+  &__opened {
+    background-color: var(--gray-2000);
+    border-radius: 1.6rem;
+
+    @media (max-width: $breakpoint-sm) {
+      background-color: var(--violet-700);
+    }
+  }
+
+  &__table {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+
+    @include max-width($breakpoint-sm) {
+      display: grid;
+      grid-template-rows: 0fr;
+      overflow: hidden;
+      border-top: 1px solid rgba(0, 0, 0, 0);
+      transition: grid-template-rows 0.3s, padding 0.3s;
+
+      &.active {
+        grid-template-rows: 1fr;
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+      }
+
+      .table {
+        min-height: 0;
+      }
+    }
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    height: 5.6rem;
+    padding: 0 4.8rem 0 1.2rem;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--gray-100);
+    cursor: default;
+    transition-duration: 0.3s;
+
+    @media (max-width: $breakpoint-sm) {
+      cursor: pointer;
+      background-image: url('../img/svg/tab-arr.svg');
+      background-repeat: no-repeat;
+      background-position: right 2rem center;
+      background-size: 0.5rem 1rem;
+      transition-duration: 0.3s;
+      transform: rotate(0);
+
+      &.active {
+        background-image: url('../img/svg/tab-arr-up.svg');
+        background-size: 1rem 0.5rem;
+      }
+    }
+  }
+
+  &__more {
+    display: none;
+
+    > span {
+      margin: 0 0 0 1.2rem;
+    }
+
+    @media (max-width: $breakpoint-xs) {
+      display: flex;
+    }
+  }
+
+  &__feed-count {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+  }
+
+  &__svg {
+    margin: 0 1.2rem 0 0;
+  }
+}

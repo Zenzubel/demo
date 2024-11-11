@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html data-theme="light" class="page page--{{ title }}" {{#if isDev }} data-dev {{/if}}>
+
+<head>
+	{{> layouts/head }}
+
+	<title>{{ title }}</title>
+</head>
+
+<body>
+	<div class="content">
+		{{> layouts/header}}
+
+		<main>
+			{{> components/blur }}
+			{{> sections/product-card }}
+			{{> sections/other }}
+
+			{{!-- {{> components/prefooter }} --}}
+		</main>
+
+		{{> layouts/footer noborder="noborder"}}
+	</div>
+
+	{{> layouts/modals }}
+	{{> layouts/tooltips }}
+</body>
+
+</html>

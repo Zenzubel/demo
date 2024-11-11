@@ -1,0 +1,94 @@
+{{#if type1}}
+<div class="cart-card">
+	<div class="cart-card__content">
+		<div class="cart-card__image-box cart-card__image-box--column cart-card__image-box--gap">
+			<div class="cart-card__picture-box">
+				<picture class="top-slider__picture">
+					<source media="(min-width: 568px)" srcset="../../img/cart/cart250x380.webp" type="image/webp">
+					<source srcset="../../img/cart/cart70x106.webp">
+					<img srcset="../../img/cart/cart70x106.jpg" alt="Изображение секс-куклы">
+				</picture>
+			</div>
+			<button class="button button--null">{{> ui/svg id="trash"}}</button>
+		</div>
+
+		<div class="cart-card__operat cart-card__operat--column cart-card__operat--gap">
+			<div class="cart-card__head">Секс кукла Кейт 165 с гигантской</div>
+			<div class="cart-card__quantity">
+				<div class="cart-card__counter cntr" data-quantity data-start-value="11">
+					<button class="button button--null button--count cntr__button cntr__button--minus" data-quantity-minus>
+						{{> ui/svg id="minus"}}
+					</button>
+					<input type="text" class="input input--null cntr__input" value="1" data-start-value="1" data-quantity-input>
+					<button class="button button--null button--count cntr__button cntr__button--plus" data-quantity-plus>
+						{{> ui/svg id="plus2"}}
+					</button>
+				</div>
+				<div class="cart-card__quantity-price">
+					<span>за 1 шт.</span>
+					<span>123 500</span>
+					<span>₽</span>
+				</div>
+			</div>
+			<div class="cart-card__footer">
+				<div class="cart-card__footer-left">
+					{{> components/have haveTypeCart="true"}}
+					<button
+						class="button button--null cart-card__footer-about cart-card__footer-about--black under-dotted under-dotted--black"
+						data-modal-target="{{modal-id1}}">О товаре</button>
+				</div>
+				<div class=" cart-card__footer-right">
+					<span class="cart-card__total-price">250 500</span>
+					<span class="cart-card__total-price-currency">₽</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+{{else if type2}}
+<div class="cart-card">
+	<div class="cart-card__content">
+		<div class="cart-card__image-box cart-card__image-box--column cart-card__image-box--gap">
+			<div class="cart-card__picture-box">
+				<picture class="top-slider__picture">
+					<source media="(min-width: 568px)" srcset="../../img/cart/cart250x380.webp" type="image/webp">
+					<source srcset="../../img/cart/cart70x106.webp">
+					<img srcset="../../img/cart/cart70x106.jpg" alt="Изображение секс-куклы">
+				</picture>
+			</div>
+			<button class="button button--null">{{> ui/svg id="trash"}}</button>
+		</div>
+
+		<div class="cart-card__operat cart-card__operat--column cart-card__operat--gap">
+			<div class="cart-card__head">Секс кукла Кейт 165 с гигантской грудью</div>
+			<div class="cart-card__quantity">
+				<div class="cart-card__counter cntr" data-quantity data-start-value="22">
+					<button class="button button--null button--count cntr__button cntr__button--minus" data-quantity-minus>
+						{{> ui/svg id="minus"}}
+					</button>
+					<input type="text" class="input input--null cntr__input" value="1" data-start-value="1" data-quantity-input>
+					<button class="button button--null button--count cntr__button cntr__button--plus" data-quantity-plus>
+						{{> ui/svg id="plus2"}}
+					</button>
+				</div>
+				<div class="cart-card__quantity-price">
+					<span>за 1 шт.</span>
+					<span>123 500</span>
+					<span>₽</span>
+				</div>
+			</div>
+			<div class="cart-card__footer">
+				<div class="cart-card__footer-left">
+					{{> components/have underOrderCart="true"}}
+					<button class="button button--null cart-card__footer-about under-dotted"
+						data-modal-target="{{modal-id2}}">Выбранные опции</button>
+				</div>
+				<div class="cart-card__footer-right">
+					<span class="cart-card__total-price">250 500</span>
+					<span class="cart-card__total-price-currency">₽</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+{{/if}}

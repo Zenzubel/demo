@@ -1,0 +1,78 @@
+.types {
+  min-width: 9.6rem;
+  max-width: 10.6rem;
+
+  @include max-width($breakpoint-xxs-3) {
+    width: 9.6rem;
+  }
+
+  &__view {
+    position: relative;
+  }
+
+  &__radio {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  &__checker {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 3.2rem;
+    height: 3.2rem;
+  }
+
+  &__picture {
+    overflow: hidden;
+    cursor: zoom-in;
+    border-radius: 50%;
+  }
+
+  &__text {
+    margin: 0.7rem 0 0 0;
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: var(--gray-100);
+  }
+
+  &__circle {
+    position: relative;
+    padding: 0.2rem;
+    overflow: hidden;
+    border-radius: 50%;
+
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      width: 100%;
+      height: 100%;
+      content: '';
+      background: linear-gradient(to right, rgba(241, 66, 103, 0) 0, rgba(241, 66, 103, 1) 100%),
+        var(--violet-200);
+      opacity: 0;
+      transition-duration: 0.3s;
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        &::before {
+          opacity: 1;
+        }
+      }
+    }
+
+    &--disabled {
+      .types__picture {
+        cursor: default;
+      }
+
+      &::before {
+        display: none;
+      }
+    }
+  }
+}

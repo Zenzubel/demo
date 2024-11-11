@@ -1,0 +1,54 @@
+.search-item {
+
+	display: flex;
+	gap: 1.2rem;
+	padding: 0.75rem 0;
+
+	+ .search-item {
+		border-top: 1px solid var(--gray-1400);
+	}
+
+	&__image {
+		flex: 0 0 6rem;
+		width: 6rem;
+		min-width: 6rem;
+		height: 6rem;
+		min-height: 6rem;
+		overflow: hidden;
+		border-radius: 0.6rem;
+	}
+
+	&__head {
+		text-align: left;
+		font-size: 1.3rem;
+		font-weight: 500;
+		color: black;
+	}
+
+	&__info {
+		display: flex;
+		flex-direction: column;
+		gap: 0.65rem;
+	}
+
+	&__picture {
+		max-width: 100%;
+		img, 
+		source {
+			max-width: 100%;
+			object-fit: cover;
+		}
+	}
+
+	&__container {
+		display: flex;
+		align-items: center;
+		gap: 0.7rem;
+	}
+
+	&__price {
+		font-size: 1.3rem;
+		font-weight: 600;
+		color: black;
+	}
+}

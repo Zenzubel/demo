@@ -1,0 +1,26 @@
+.options {
+  &__control {
+    display: flex;
+    align-items: center;
+  }
+
+  &__tab-page {
+    display: none;
+
+    &.active {
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+  }
+
+  &__parent {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    @include max-width($breakpoint-xxs-3) {
+      gap: 1.6rem;
+    }
+  }
+}

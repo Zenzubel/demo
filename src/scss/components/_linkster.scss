@@ -1,0 +1,21 @@
+.linkster {
+  &__link {
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: var(--gray-1700);
+    white-space: nowrap;
+    transition-duration: 0.3s;
+  }
+
+  &--mobile {
+    margin: 0.5rem 0 0 0;
+
+    .linkster__item {
+      padding: 0.5rem 0;
+    }
+
+    .linkster__item + .linkster__item {
+      margin: 1.2rem 0 0 0;
+    }
+  }
+}

@@ -1,0 +1,62 @@
+<div class="confirm">
+	<div class="confirm__wrapper confirm__wrapper--width confirm__wrapper--column confirm__wrapper--gap">
+		<div class="confirm__placed">
+			{{> ui/svg id="placed-icon"}}
+			<div class="confirm__placed-text">Заказ оформлен</div>
+		</div>
+		<div class="confirm__total">
+			<ul class="region__total-list">
+				<li class="region__total-item toc">
+					<div class="region__total-head toc__head">
+						<span class="region__total-head-inn toc__head-inn">
+							Номер заказа
+						</span>
+					</div>
+					<div class="region__total-value toc__value">
+						<span class="region__total-simbol">№</span>
+						<span class="region__total-number">4566745</span>
+					</div>
+				</li>
+				<li class="region__total-item toc">
+					<div class="region__total-head toc__head">
+						<span class="region__total-head-inn toc__head-inn">
+							Дата заказа
+						</span>
+					</div>
+					<div class="region__total-value toc__value">
+						<span class="region__total-date">26.03.2024</span>
+						<span class="region__total-time">14:45</span>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="confirm__verify">
+			<div class="confirm__verify-text">
+				Подтвердить заказ можно только через мессенджеры <span class="confirm__verify-text-color">WhatsApp</span> или
+				<span class="confirm__verify-text-color">Telegram</span>
+			</div>
+			<button class="button button--type2 text-uppercase" type="button"
+				data-modal-target="#modal-order-verify">Подтвердить заказ</button>
+		</div>
+		<div class="confirm__subscribe confirm__subscribe--column confirm__subscribe--gap">
+			<div class="confirm__chanel">
+				<div class="confirm__about">Подписывайтесь на наш канал в телеграм, чтобы первым узнавать о всех акциях ,
+					новинках и новостях рынка реалистичных секс кукол</div>
+				<a href="#" class="button button--null button--white text-uppercase" target="_blank">
+					{{> ui/svg id="telegram-icon"}}
+					Подписаться на канал
+				</a>
+			</div>
+			<div class="confirm__chanel">
+				<div class="confirm__about">Вступайте в нашу группу VK</div>
+				<a href="#" class="button button--null button--white text-uppercase" target="_blank">
+					{{> ui/svg id="vk-icon"}}
+					вступить в группу
+				</a>
+			</div>
+		</div>
+
+		{{> components/cards-row flex="flex" scroll="scroll" countNum="0" titleText="Новинки" button="true"
+		newProducts="true"}}
+	</div>
+</div>
